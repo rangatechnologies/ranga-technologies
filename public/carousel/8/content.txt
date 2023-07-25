@@ -1,0 +1,11 @@
+Name = Sparfix
+Country  = Senegal
+Star Count = 5/5
+Feedback = The work done by the developer is really 
+exceptional, it completely meets my 
+expectations. The code is clear. The developer
+is very patient and very pedagogical. He took
+the time to explain to me the work that was 
+accomplished. I am already preparing a new 
+project and it will be with him. I highly 
+recommend it and thank you again

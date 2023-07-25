@@ -1,0 +1,8 @@
+Name = Sapaiklong
+Country  = Thailand
+Star Count = 5/5
+Feedback = Ranga did a fantastic job and met all my 
+requirements. He also went over how to set it 
+up and use it via a remote desktop session. 
+If you're looking for a system to assist you 
+with crypto trading, this is a great option.

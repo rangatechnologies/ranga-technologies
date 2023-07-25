@@ -1,0 +1,10 @@
+Name = Esco
+Country  = United States
+Star Count = 5/5
+Feedback = Amazing coder! Ranga is the best bot maker 
+out there. Answered all of my questions 
+thoroughly and patiently. He even went the 
+extra mile to learn more in order to add 
+additional features he had not done before. 
+Very honest, trustworthy and honourable 
+person. Very fast as well. I highly recommend!

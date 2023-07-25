@@ -1,0 +1,6 @@
+Name = Schar Stellar
+Country  = Greece
+Star Count = 5/5
+Feedback = Delivered my order on time, trustworthy person,
+has knowledge, understandable, it would be 
+my pleasure to work with Ranga again.

@@ -1,0 +1,7 @@
+Name = Dcs
+Country  = Thailand
+Star Count = 5/5
+Feedback = Ranga is very awesome. He is really 
+support and wait and teach. I really 
+recommend him with a modular design bot 
+and very effective way to do the robot.

@@ -1,0 +1,4 @@
+Name = Livebot
+Country  = Thailand
+Star Count = 5/5
+Feedback = Most talented person I ever worked with.

@@ -1,0 +1,5 @@
+Name = Livebot
+Country  = Thailand
+Star Count = 5/5
+Feedback = Extremely skilled. Whatever you need, 
+he'll make it happen.

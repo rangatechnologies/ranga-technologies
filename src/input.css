@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: NeueHaasDisplayBlack;
+    src: url("fonts/NeueHaasDisplayMediu.ttf") format("truetype");
+  }
