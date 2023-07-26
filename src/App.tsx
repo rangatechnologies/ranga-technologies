@@ -24,7 +24,7 @@ function TelegramOpen(){
     }
 
 function FacebookOpen(){
-  window.open("https://www.facebook.com/RangaTradingBot")
+  window.open("https://web.facebook.com/ubot.trading.9/")
     }
 
 function FiverrOpen(){

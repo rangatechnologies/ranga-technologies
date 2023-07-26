@@ -145,7 +145,7 @@ export default function HomeMainComponent() {
                     <button onClick={() => window.open("https://t.me/rangaubot")}  className=" button button2" >
                       <div  className="img" ><img  alt="" src={telegram} /></div>                        
                     </button>
-                    <button onClick={() => window.open("https://www.facebook.com/RangaTradingBot")}  className="button button3" >
+                    <button onClick={() => window.open("https://web.facebook.com/ubot.trading.9/")}  className="button button3" >
                       <div  className="img" ><img  alt="" src={facebook} /></div>                        
                     </button>
                     <button onClick={() => window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")}  className="button button4" >
@@ -202,7 +202,7 @@ export default function HomeMainComponent() {
                     <button onClick={() => window.open("https://t.me/rangaubot")}  className="button button2" >
                       <div  className="img" ><img  alt="" src={telegram} /></div>                        
                     </button>
-                    <button onClick={() => window.open("https://www.facebook.com/RangaTradingBot")}  className="button button3" >
+                    <button onClick={() => window.open("https://web.facebook.com/ubot.trading.9/")}  className="button button3" >
                       <div  className="img" ><img  alt="" src={facebook} /></div>                        
                     </button>
                     <button onClick={() => window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")}  className="button button4" >
