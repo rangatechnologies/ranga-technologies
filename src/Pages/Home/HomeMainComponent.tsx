@@ -106,7 +106,7 @@ export default function HomeMainComponent() {
 
         <div className="max-w-6xl justify-center flex items-start flex-col  w-full">
           <div className="w-full h-40 md:h-0 flex md:flex-row flex-col overflow-visible font-sans items-center md:items-start">
-            {/* Web */}
+            {/* Web @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/}
             <div className=" hidden md:flex   z-10">
               <div
                 className="border-primary rounded-full flex overflow-visible justify-center items-center"
@@ -164,7 +164,7 @@ export default function HomeMainComponent() {
               </div>
             </div> 
 
-            {/* Mobile */}
+            {/* Mobile @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
             <div className=" md:hidden flex z-10">
               <div
                 className="border-primary rounded-full flex flex-col overflow-visible justify-center items-center"
@@ -176,7 +176,7 @@ export default function HomeMainComponent() {
                 }}
               >
                 <div
-                  className="bg-primary flex h-24 w-24 items-center p-1 rounded-full"
+                  className="bg-primary flex mt-8 h-24 w-24 items-center p-1 rounded-full"
                   style={{
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
