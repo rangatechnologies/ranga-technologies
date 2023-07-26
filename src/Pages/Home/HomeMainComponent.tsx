@@ -107,7 +107,7 @@ export default function HomeMainComponent() {
         <div className="max-w-6xl justify-center flex items-start flex-col  w-full">
           <div className="w-full h-40 md:h-0 flex md:flex-row flex-col overflow-visible font-sans items-center md:items-start">
             {/* Web @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/}
-            <div className=" hidden md:flex   z-10">
+            <div className=" hidden md:flex   z-50">
               <div
                 className="border-primary rounded-full flex overflow-visible justify-center items-center"
                 style={{
@@ -142,7 +142,7 @@ export default function HomeMainComponent() {
                     {/* <button onClick={() => window.open("ranganaupul@gmail.com")}  className="button button1" >
                       <div  className="img" ><img  alt="" src={gmail} /></div>                        
                     </button> */}
-                    <button onClick={() => window.open("https://t.me/rangaubot")}  className="button button2" >
+                    <button onClick={() => window.open("https://t.me/rangaubot")}  className=" button button2" >
                       <div  className="img" ><img  alt="" src={telegram} /></div>                        
                     </button>
                     <button onClick={() => window.open("https://www.facebook.com/RangaTradingBot")}  className="button button3" >
@@ -165,7 +165,7 @@ export default function HomeMainComponent() {
             </div> 
 
             {/* Mobile @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
-            <div className=" md:hidden flex z-10">
+            <div className=" md:hidden flex z-50">
               <div
                 className="border-primary rounded-full flex flex-col overflow-visible justify-center items-center"
                 style={{
