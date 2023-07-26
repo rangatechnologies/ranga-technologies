@@ -291,15 +291,13 @@ export default function HomeMainComponent() {
 <div className="container mx-auto py-8 bg-[#ffffff]">
 
 
-<div className=" lg:gap-12">
+<div className="max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl lg:gap-12">
   {/* Box 1 */}
  
-  <div className=" drop-shadow-lg  lg:p-4 bg-[#B1B2FF]   " >
+  <div className="drop-shadow-lg max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl rounded lg:p-4 bg-[#B1B2FF]   " >
 
-
-
-      <iframe className="h-96 w-full  flex  rounded"         frameBorder='0'
-         width="1280" height="720" title="vimeo-player" src="https://player.vimeo.com/video/848486988?h=9a9f238f24?rel=0&autoplay=1&mute=1" allow="autoplay; encrypted-media"     ></iframe>
+      <iframe   className="  w-full  flex  rounded"         frameBorder='0'
+         width="1280"  height="720" title="vimeo-player" src="https://player.vimeo.com/video/848486988?h=9a9f238f24?rel=0&autoplay=1&mute=1" allow="autoplay; encrypted-media"     ></iframe>
 
 
   </div>
