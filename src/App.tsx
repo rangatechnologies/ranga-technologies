@@ -64,9 +64,9 @@ function App() {
         {/* Box 1 */}
        
         <div className=" drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] " >
-          <div className='mt-24 ml-14 h-80'>
-          <h2 className=" text-8xl text-left font-neu mb-2">Start a</h2>
-          <h2 className=" text-8xl text-left font-neu mb-2">conversation</h2>
+          <div className='mt-24 ml-2 lg:ml-14 h-60 md:h-75 lg:h-80'>
+          <h2 className="text-4xl md:text-6xl lg:text-8xl text-left font-neu mb-2">Start a</h2>
+          <h2 className=" text-4xl md:text-6xl lg:text-8xl text-left font-neu mb-2">conversation</h2>
           <p className=" text-left">Get in touch with us to discuss new</p>
           <p className=" text-left">product ideas and business</p>
           <p className=" text-left">opportunities.</p>
@@ -74,12 +74,12 @@ function App() {
           </div>
 
           {/* about you */}
-          <div className='mt-24 ml-14 grid grid-cols-5'>
+          <div className='mt-2 ml-10 lg:mt-24 lg:ml-14 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'>
          
-         <div className='col-span-2'>
-            <h2 className=" text-6xl text-left font-neu mb-2">About you</h2>
+         <div className='col-span-1 lg:col-span-2'>
+            <h2 className=" text-3xl md:text-4xl lg:text-6xl text-left font-neu mb-2">About you</h2>
          </div>   
-         <div className='col-span-3'>
+         <div className='col-span-1 md:col-span-2 lg:col-span-3'>
       <form className=" mx-auto p-4 bg-gray-100  rounded-md">
       <div className="mb-4">
 
@@ -131,12 +131,12 @@ function App() {
           </div>
 
           {/* about your project */}
-          <div className='mt-24 ml-14 grid grid-cols-5'>
+          <div className='mt-24 ml-14 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'>
          
-         <div className='col-span-2'>
-            <h2 className=" text-6xl text-left font-neu mb-2">About your project</h2>
+         <div className='col-span-1 lg:col-span-2'>
+            <h2 className=" text-3xl md:text-4xl lg:text-6xl text-left font-neu mb-2">About your project</h2>
          </div>   
-         <div className='col-span-3'>
+         <div className='col-span-1 md:col-span-2 lg:col-span-3'>
       <form className=" mx-auto p-4 bg-gray-100  rounded-md">
       <div className="mb-4 w-auto">
 
@@ -155,7 +155,7 @@ function App() {
 <label className='' htmlFor="">What services do you need?</label>
 
 {/* tick boxes */}
-<div className=' mt-4 mb-4 grid grid-cols-3'>
+<div className=' mt-4 mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
 
 {/* tick box */}
 
@@ -269,7 +269,7 @@ function App() {
           </div>
 
           <div className=' grid grid-cols-2 md:grid-cols-6 items-center w-fit justify-center mt-10 space-x-14 space-y-2'>
-            <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
+            <div className=' ml-14 flex flex-row justify-center items-center text-lg space-x-2'>
             <button className="button button1" onClick={EmailOpen}  >
                         <div  className="img" >
                           <img  alt="" src={gmail} />

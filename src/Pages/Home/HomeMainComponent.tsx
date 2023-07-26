@@ -291,21 +291,18 @@ export default function HomeMainComponent() {
 <div className="container mx-auto py-8 bg-[#ffffff]">
 
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1  gap-12">
+<div className=" lg:gap-12">
   {/* Box 1 */}
  
-  <div className=" drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#B1B2FF]   " >
-      <div className=" flex">
+  <div className=" drop-shadow-lg  lg:p-4 bg-[#B1B2FF]   " >
 
 
-    <iframe className="rounded"         frameBorder='0'
+
+      <iframe className="h-96 w-full  flex  rounded"         frameBorder='0'
          width="1280" height="720" title="vimeo-player" src="https://player.vimeo.com/video/848486988?h=9a9f238f24?rel=0&autoplay=1&mute=1" allow="autoplay; encrypted-media"     ></iframe>
 
-    </div> 
+
   </div>
-
-
-
 
   </div>
 
