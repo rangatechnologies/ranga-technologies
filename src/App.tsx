@@ -20,11 +20,11 @@ function EmailOpen(){
   window.open("https://mail.google.com/mail/u/2/#inbox")
     }
 function TelegramOpen(){
-  window.open("https://web.telegram.org/")
+  window.open("https://t.me/rangaubot")
     }
 
 function FacebookOpen(){
-  window.open("https://www.facebook.com/")
+  window.open("https://www.facebook.com/RangaTradingBot")
     }
 
 function FiverrOpen(){
@@ -36,7 +36,7 @@ function FiverrOpen(){
 //     }
 
 function WhatsAppOpen(){
-  window.open("https://www.upwork.com")
+  window.open("https://wa.me/message/XEABYADPSDL2D1")
     }
 
 
