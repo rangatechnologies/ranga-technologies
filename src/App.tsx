@@ -11,7 +11,7 @@ import facebook from "../src/Imgs/SVGComponets/facebook.svg";
 import whatsapp from "../src/Imgs/SVGComponets/whatsapp.svg";
 // import fiverr from "../src/Imgs/SVGComponets/insta.svg";
 import insta from "../src/Imgs/SVGComponets/insta.svg";
-import upwork from "../src/Imgs/SVGComponets/upwork.svg";
+// import upwork from "../src/Imgs/SVGComponets/upwork.svg";
 
 
 // Chanell openning
@@ -31,9 +31,9 @@ function FiverrOpen(){
   window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")
     }
 
-function UpworkOpen(){
-  window.open("https://www.upwork.com")
-    }
+// function UpworkOpen(){
+//   window.open("https://www.upwork.com")
+//     }
 
 function WhatsAppOpen(){
   window.open("https://www.upwork.com")
@@ -268,7 +268,7 @@ function App() {
             Ranga Trading
           </div>
 
-          <div className=' grid grid-cols-2 md:grid-cols-6 items-center w-fit justify-center mt-10 space-x-14 space-y-2'>
+          <div className=' grid grid-cols-2 md:grid-cols-5 items-center w-fit justify-center mt-10 space-x-14 space-y-2'>
             <div className=' ml-14 flex flex-row justify-center items-center text-lg space-x-2'>
             <button className="button button1" onClick={EmailOpen}  >
                         <div  className="img" >
@@ -300,13 +300,13 @@ function App() {
                         </div>                        
                       </button> 
             </div>
-            <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
+            {/* <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
             <button className="button button1" onClick={UpworkOpen}  >
                         <div  className="img" >
                           <img  alt="" src={upwork} />
                         </div>                        
                       </button> 
-            </div>
+            </div> */}
             <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
             <button className="button button1" onClick={WhatsAppOpen}  >
                         <div  className="img" >

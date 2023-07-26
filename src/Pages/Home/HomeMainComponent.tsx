@@ -13,7 +13,7 @@ import facebook from "../../Imgs/SVGComponets/facebook.svg";
 import whatsapp from "../../Imgs/SVGComponets/whatsapp.svg";
 // import fiverr from "../../Imgs/SVGComponets/insta.svg";
 import insta from "../../Imgs/SVGComponets/insta.svg";
-import upwork from "../../Imgs/SVGComponets/upwork.svg";
+// import upwork from "../../Imgs/SVGComponets/upwork.svg";
 import "./home.css";
 
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
@@ -151,9 +151,9 @@ export default function HomeMainComponent() {
                     <button onClick={() => window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")}  className="button button4" >
                       <div  className="img" ><img  alt="" src={insta} /></div>                        
                     </button>
-                    <button onClick={() => window.open("https://www.upwork.com/services/product/automated-trading-bot-for-tradingview-and-binance-exchange-1521022452186038272?ref=project_share")}  className="button button5" >
+                    {/* <button onClick={() => window.open("https://www.upwork.com/services/product/automated-trading-bot-for-tradingview-and-binance-exchange-1521022452186038272?ref=project_share")}  className="button button5" >
                       <div  className="img" ><img  alt="" src={upwork} /></div>                        
-                    </button>
+                    </button> */}
                     <button onClick={() => window.open("https://wa.me/message/XEABYADPSDL2D1")}  className="button button6" >
                       <div  className="img" ><img  alt="" src={whatsapp} /></div>                        
                     </button>
@@ -208,9 +208,9 @@ export default function HomeMainComponent() {
                     <button onClick={() => window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")}  className="button button4" >
                       <div  className="img" ><img  alt="" src={insta} /></div>                        
                     </button>
-                    <button onClick={() => window.open("https://www.upwork.com/services/product/automated-trading-bot-for-tradingview-and-binance-exchange-1521022452186038272?ref=project_share")}  className="button button5" >
+                    {/* <button onClick={() => window.open("https://www.upwork.com/services/product/automated-trading-bot-for-tradingview-and-binance-exchange-1521022452186038272?ref=project_share")}  className="button button5" >
                       <div  className="img" ><img  alt="" src={upwork} /></div>                        
-                    </button>
+                    </button> */}
                     <button onClick={() => window.open("https://wa.me/message/XEABYADPSDL2D1")}  className="button button6" >
                       <div  className="img" ><img  alt="" src={whatsapp} /></div>                        
                     </button>
