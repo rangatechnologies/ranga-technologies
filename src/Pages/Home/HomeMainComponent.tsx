@@ -163,9 +163,7 @@ export default function HomeMainComponent() {
                 </div>
               </div>
             </div> 
-            <div className="flex h-screen relative">
-              <button className="absolute bg-[#3f8ecf] text-xl font-bold top-[10%] left-[50%]">Play</button>
-            </div>
+
             {/* Mobile */}
             <div className=" md:hidden flex z-10">
               <div
