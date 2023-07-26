@@ -205,7 +205,7 @@ export default function HomeMainComponent() {
                     <button onClick={() => window.open("https://www.facebook.com/RangaTradingBot")}  className="button button3" >
                       <div  className="img" ><img  alt="" src={facebook} /></div>                        
                     </button>
-                    <button onClick={() => window.open("https://www.fiverr.com/share/9LlRee")}  className="button button4" >
+                    <button onClick={() => window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")}  className="button button4" >
                       <div  className="img" ><img  alt="" src={insta} /></div>                        
                     </button>
                     <button onClick={() => window.open("https://www.upwork.com/services/product/automated-trading-bot-for-tradingview-and-binance-exchange-1521022452186038272?ref=project_share")}  className="button button5" >
