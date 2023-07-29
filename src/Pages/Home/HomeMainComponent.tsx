@@ -35,6 +35,15 @@ import CASE5 from '../../Imgs/services design-08.png'
 import CASE6 from '../../Imgs/services design-09.png'
 import cantact_us from '../../Imgs/contact_us.png'
 
+import process1 from '../../Imgs/process1.png'
+import process2 from '../../Imgs/process2.png'
+import process3 from '../../Imgs/process3.png'
+import process4 from '../../Imgs/process4.png'
+import process5 from '../../Imgs/process5.png'
+import process6 from '../../Imgs/process6.png'
+import process7 from '../../Imgs/process7.png'
+
+
 
 
 
@@ -549,10 +558,8 @@ export default function HomeMainComponent() {
  
   <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   " >
     <div className="inline-block">
-    <div className=" flex "> 
-    {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
-    </div>
-    <img className="hover:animate-pulse transform transition-all " src={webDevelopment} />
+  
+    <img className="hover:animate-pulse transform transition-all " src={process1} />
     <div className="  ">
         <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">1. Requirement Gathering</h2>
         <h2 className="text-1xl text-center mb-3 mt-3 ">We follow the first and foremost priority of gathering requirements, resources, and information to begin our project.</h2>
@@ -564,14 +571,14 @@ export default function HomeMainComponent() {
 
   {/* Box 2 */}
   <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0] ">
-  <img className="hover:animate-pulse transform transition-all " src={mobileDevelopment}  />
+  <img className="hover:animate-pulse transform transition-all " src={process2}  />
     <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">2. UI/UX Design</h2>
     <p className="text-center">We create catchy and charming designs with the latest tools of designing to make it a best user-friendly experience.</p>
   </button>
 
     {/* Box 3 */}
     <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0]">
-    <img className="hover:animate-pulse transform transition-all " src={blockchainDevelopment} alt="" />
+    <img className="hover:animate-pulse transform transition-all " src={process3} alt="" />
     <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">3. Prototype</h2>
     <p className="text-center">After designing, you will get your prototype, which will be sent ahead for the development process for the product.</p>
   </button>
@@ -579,7 +586,7 @@ export default function HomeMainComponent() {
   
     {/* Box 4 */}
     <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0]">
-    <img className="hover:animate-pulse transform transition-all " src={blockchainDevelopment} alt="" />
+    <img className="hover:animate-pulse transform transition-all " src={process4} alt="" />
     <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">4. Development</h2>
     <p className="text-center">Development of mobile application/web/blockchain started using latest tools and technologies with transparency.</p>
   </button>
@@ -590,10 +597,8 @@ export default function HomeMainComponent() {
   {/* Box 5 */}
   <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   " >
     <div className="inline-block">
-    <div className=" flex "> 
-    {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
-    </div>
-    <img className="hover:animate-pulse transform transition-all " src={webDevelopment} />
+
+    <img className="hover:animate-pulse transform transition-all " src={process5} />
     <div className="  ">
         <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">5. Quality Assurance</h2>
         <h2 className="text-1xl text-center mb-3 mt-3 ">Hyperlink values quality and provides 100% bug free application with no compromisation in it.</h2>
@@ -604,10 +609,7 @@ export default function HomeMainComponent() {
   {/* Box 6 */}
   <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   " >
     <div className="inline-block">
-    <div className=" flex "> 
-    {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
-    </div>
-    <img className="hover:animate-pulse transform transition-all " src={webDevelopment} />
+    <img className="hover:animate-pulse transform transition-all " src={process6} />
     <div className="  ">
         <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">6. Deployment</h2>
         <h2 className="text-1xl text-center mb-3 mt-3 ">After trial and following all processes, your app is ready to launch on the App store or Play Store.</h2>
@@ -620,10 +622,8 @@ export default function HomeMainComponent() {
     {/* Box 7 */}
     <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   " >
     <div className="inline-block">
-    <div className=" flex "> 
-    {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
-    </div>
-    <img className="hover:animate-pulse transform transition-all " src={webDevelopment} />
+
+    <img className="hover:animate-pulse transform transition-all " src={process7} />
     <div className="  ">
         <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">7. Support & Maintenance</h2>
         <h2 className="text-1xl text-center mb-3 mt-3 ">Our company offers you all support and the team is always ready to answer every query after deployment.</h2>
