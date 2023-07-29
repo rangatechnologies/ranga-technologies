@@ -1,5 +1,5 @@
 
-.button1 {background-color: #ffffff;
+.button1 {background-color:none;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -11,7 +11,7 @@
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
+
     border: none;
     /* box-shadow: 0 9px rgb(77, 77, 40); */
     margin-right: 5px;

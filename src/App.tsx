@@ -13,6 +13,7 @@ import whatsapp from "../src/Imgs/SVGComponets/whatsapp.svg";
 import insta from "../src/Imgs/SVGComponets/insta.svg";
 // import upwork from "../src/Imgs/SVGComponets/upwork.svg";
 
+// import contact_us from '../../Imgs/reduce contact us.png'
 
 // Chanell openning
 
@@ -60,199 +61,13 @@ function App() {
     {/* <br /> */}
 
       {/* <h1 className="text-3xl font-bold mb-4">Responsive Box Design</h1> */}
-      <div className=" gap-1">
+      <div className="grid grid-cols-2 gap-1">
         {/* Box 1 */}
-       
-        <div className=" drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] " >
-          <div className='mt-24 ml-2 lg:ml-14 h-60 md:h-75 lg:h-80'>
-          <h2 className="text-4xl md:text-6xl lg:text-8xl text-left font-neu mb-2">Start a</h2>
-          <h2 className=" text-4xl md:text-6xl lg:text-8xl text-left font-neu mb-2">conversation</h2>
-          <p className=" text-left">Get in touch with us to discuss new</p>
-          <p className=" text-left">product ideas and business</p>
-          <p className=" text-left">opportunities.</p>
-          
-          </div>
-
-          {/* about you */}
-          <div className='mt-2 ml-10 lg:mt-24 lg:ml-14 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'>
-         
-         <div className='col-span-1 lg:col-span-2'>
-            <h2 className=" text-3xl md:text-4xl lg:text-6xl text-left font-neu mb-2">About you</h2>
-         </div>   
-         <div className='col-span-1 md:col-span-2 lg:col-span-3'>
-      <form className=" mx-auto p-4 bg-gray-100  rounded-md">
-      <div className="mb-4">
-
-        
-        <input
-          placeholder="Name"
-          type="text"
-          id="firstName"
-          name="firstName"
-          className="w-full p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
-          required
-        />
-      </div>
-
-      <div className="mb-4">
-
-        <input
-          placeholder="Email"
-          type="email"
-          id="email"
-          className="w-full p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
-          required
-        />
-      </div>
-
-      <div className="mb-4">
-
-        <input
-          placeholder="Phone Number"
-          type="name"
-          id="name"
-          name="name"
-          className="w-full p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
-          required
-        />
-      </div>
+       {/* <div>
+       <img className="hover:animate-pulse transform transition-all " src={contact_us} />
+       </div> */}
 
 
-
-      <button type="submit" className="transition-all transform duration-500 bg-[#ACFADF] text-white py-2 px-4 rounded-md hover:bg-[#6f3cc8]">
-        Submit
-      </button>
-           </form>
-         </div>   
- 
-
-         
-
-          </div>
-
-          {/* about your project */}
-          <div className='mt-24 ml-14 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'>
-         
-         <div className='col-span-1 lg:col-span-2'>
-            <h2 className=" text-3xl md:text-4xl lg:text-6xl text-left font-neu mb-2">About your project</h2>
-         </div>   
-         <div className='col-span-1 md:col-span-2 lg:col-span-3'>
-      <form className=" mx-auto p-4 bg-gray-100  rounded-md">
-      <div className="mb-4 w-auto">
-
-        <label className='' htmlFor="">What do you want to achieve?</label>
-
-      <select className='w-full p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500' id="country" name="country">
-      <option value="australia">Web Development</option>
-      <option value="canada">Mobile APP Development</option>
-      <option value="usa">Blockchain Development</option>
-    </select>
-        
-      </div>
-
-      {/* <!--Default disabled checkbox--> */}
-
-<label className='' htmlFor="">What services do you need?</label>
-
-{/* tick boxes */}
-<div className=' mt-4 mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-
-{/* tick box */}
-
-<div className="transition-all duration-400 col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-        <label className='' htmlFor="">Web Development</label>
-  <input
-    className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent disabled:opacity-60 dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-    type="checkbox"
-    value=""
-    id="flexCheckDisabled"
-    />
-    
-</div>
-
-{/* tick box */}
-<div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-        <label className='' htmlFor="">Trading Strategy Development</label>
-  <input
-    className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent disabled:opacity-60 dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-    type="checkbox"
-    value=""
-    id="flexCheckDisabled"
-    />
-    
-</div>
-{/* tick box */}
-<div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-        <label className='' htmlFor="">Volume Bot Development</label>
-  <input
-    className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent disabled:opacity-60 dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-    type="checkbox"
-    value=""
-    id="flexCheckDisabled"
-    />
-    
-</div>
-{/* tick box */}
-
-<div className="transition-all duration-400 col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-        <label className='' htmlFor="">Flashloan Bot Development</label>
-  <input
-    className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent disabled:opacity-60 dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-    type="checkbox"
-    value=""
-    id="flexCheckDisabled"
-    />
-    
-</div>
-
-{/* tick box */}
-<div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-        <label className='' htmlFor="">MOBILE DEVELOPMENT</label>
-  <input
-    className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent disabled:opacity-60 dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-    type="checkbox"
-    value=""
-    id="flexCheckDisabled"
-    />
-    
-</div>
-{/* tick box */}
-<div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-        <label className='' htmlFor="">Blockchain Development</label>
-  <input
-    className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent disabled:opacity-60 dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-    type="checkbox"
-    value=""
-    id="flexCheckDisabled"
-    />
-    
-</div>
-
-</div>
-
-{/* tell us about your project */}
-<label className='' htmlFor="">Tell us about your project</label>
-<div>
-<textarea className ="w-full p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md" id="subject" name="subject" placeholder="Write something.." ></textarea>
-
-
-</div>
-     
-
-      <button type="submit" className="transition-all transform duration-500 bg-[#ACFADF] text-white py-2 px-4 rounded-md hover:bg-[#6f3cc8]">
-        Submit
-      </button>
-           </form>
-         </div>  
-
-
-         
-
-          </div>
-
-
-          
-        </div>
         </div>
         </div>
 
@@ -270,35 +85,66 @@ function App() {
 
           <div className=' grid grid-cols-2 md:grid-cols-5 items-center w-fit justify-center mt-10 space-x-14 space-y-2'>
             <div className=' ml-14 flex flex-row justify-center items-center text-lg space-x-2'>
-            <button className="button button1" onClick={EmailOpen}  >
-                        <div  className="img" >
-                          <img  alt="" src={gmail} />
+            <button onClick={() => window.open("ranganaupul@gmail.com")}  className="button button4" >
+                      <div >
+                      <svg className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#ea4335]"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24">
+  <path
+    d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
+    fill-rule="evenodd"
+    clip-rule="evenodd" />
+</svg>
                         </div>                        
-                      </button> 
+                    </button> 
             </div>
 
             <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
-            <button className="button button1" onClick={TelegramOpen}  >
-                        <div  className="img" >
-                          <img  alt="" src={telegram} />
+            <button onClick={() => window.open("https://t.me/rangaubot")}  className=" button button2" >
+                      <div >
+                      <svg className=" hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#0088cc]"
+  fill="currentColor"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+
+  >
+  <path
+    id="telegram-1"
+    d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z" />
+</svg>
+                        
                         </div>                        
-                      </button> 
+                    </button>
             </div>
 
             <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
-            <button className="button button1" onClick={FacebookOpen}  >
-                        <div  className="img" >
-                          <img  alt="" src={facebook} />
+            <button onClick={() => window.open("https://web.facebook.com/ubot.trading.9/")}  className="button button3" >
+                      <div  >
+                      <svg className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#1877f2]"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  viewBox="0 0 24 24">
+  <path
+    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+</svg>
+                        
                         </div>                        
-                      </button> 
+                    </button>
             </div>
 
             <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
-            <button className="button button1" onClick={FiverrOpen}  >
-                        <div  className="img" >
-                          <img  alt="" src={insta} />
+            <button onClick={() => window.open("https://instagram.com/rangatechnologies?igshid=NGExMmI2YTkyZg==")}  className="button button4" >
+                      <div  >
+                      <svg className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#c13584]"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  viewBox="0 0 24 24">
+  <path
+    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+</svg>
+                        
                         </div>                        
-                      </button> 
+                    </button>
             </div>
             {/* <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
             <button className="button button1" onClick={UpworkOpen}  >
@@ -308,11 +154,17 @@ function App() {
                       </button> 
             </div> */}
             <div className=' flex flex-row justify-center items-center text-lg space-x-2'>
-            <button className="button button1" onClick={WhatsAppOpen}  >
-                        <div  className="img" >
-                          <img  alt="" src={whatsapp} />
+            <button onClick={() => window.open("https://wa.me/message/XEABYADPSDL2D1")}  className="button button6" >
+                      <div  >
+                      <svg className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#128c7e]"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24">
+  <path
+    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+</svg>
+
                         </div>                        
-                      </button> 
+                    </button>
             </div>
           </div>
           <div style={{fontWeight:'bold', padding:'20px', fontSize: '20px'}}>
