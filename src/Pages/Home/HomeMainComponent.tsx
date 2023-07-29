@@ -638,7 +638,7 @@ export default function HomeMainComponent() {
     </div>
 {/* Start conversetion  */}
 
-<div className=' lg:ml-4 h-60 md:h-75 lg:h-48 bg-[#ECF2FF]'>
+<div className='w-full  h-60 md:h-75 lg:h-48 bg-[#ECF2FF]'>
   <div className="">
     <br />
     <br />
@@ -840,7 +840,9 @@ export default function HomeMainComponent() {
 
           
         </div>
-        <div></div>
+        <div>
+
+        </div>
         </div>
     </div>
   );
