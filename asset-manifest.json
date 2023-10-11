@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ef4c15db.css",
+    "main.js": "/static/js/main.507be494.js",
+    "static/media/contact_us.png": "/static/media/contact_us.a692b6e6ed157eedaa4d.png",
+    "static/media/services design-09.png": "/static/media/services design-09.0411cc3e6795f21fb95d.png",
+    "static/media/services design-07.png": "/static/media/services design-07.6e2a989ea444aeb9f073.png",
+    "static/media/services design-03.png": "/static/media/services design-03.07ae4168312c20c3920a.png",
+    "static/media/services design-05.png": "/static/media/services design-05.1684395b15f54a1cc35f.png",
+    "static/media/services design-06.png": "/static/media/services design-06.f66ca62a5c0d04820bb2.png",
+    "static/media/services design-02.png": "/static/media/services design-02.b4d30f008148f1a50167.png",
+    "static/media/services design-01.png": "/static/media/services design-01.d8b59a7131d1147deeeb.png",
+    "static/media/services design-08.png": "/static/media/services design-08.f4d6e9693332de6e929f.png",
+    "static/media/services design-04.png": "/static/media/services design-04.9e257be03c4e508049e1.png",
+    "static/media/process4.png": "/static/media/process4.f1da82d582c5cca1c4ff.png",
+    "static/media/process6.png": "/static/media/process6.70a0e5e82cf60062d0db.png",
+    "static/media/process2.png": "/static/media/process2.0b0881b47d26bf97ea9b.png",
+    "static/media/process5.png": "/static/media/process5.f0dbe47fd9db5da3864a.png",
+    "static/media/process3.png": "/static/media/process3.ab194e9f5c6fcafe245e.png",
+    "static/media/NeueHaasDisplayMediu.ttf": "/static/media/NeueHaasDisplayMediu.32921edb532f55cbfdc6.ttf",
+    "static/media/process7.png": "/static/media/process7.ce707c953cc4f4393a5a.png",
+    "static/media/process1.png": "/static/media/process1.497ed5eab2cfbf594365.png",
+    "static/media/captain.svg": "/static/media/captain.19fe4dcf036739afb5c3b0c007e7f05a.svg",
+    "static/media/whale.svg": "/static/media/whale.eb35ef1e5782fa35cc9d7b005fc74379.svg",
+    "static/media/bitcoin.svg": "/static/media/bitcoin.8b4e83bb271b345d7719ec594857d98d.svg",
+    "static/media/logo.svg": "/static/media/logo.9726e21af02bc9a52fe98ef0298a809f.svg",
+    "static/media/fish.svg": "/static/media/fish.6515727dd5108d24aacc4b321a461c9b.svg",
+    "index.html": "/index.html",
+    "static/media/wave.svg": "/static/media/wave.5c7ff71d2ba7cfe5dbff8408f580dfc6.svg",
+    "main.ef4c15db.css.map": "/static/css/main.ef4c15db.css.map",
+    "main.507be494.js.map": "/static/js/main.507be494.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef4c15db.css",
+    "static/js/main.507be494.js"
+  ]
+}

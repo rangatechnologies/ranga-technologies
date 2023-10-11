@@ -1,0 +1,5 @@
+Name = Livebot
+Country  = Thailand
+Star Count = 5/5
+Feedback = Reliable and trustworthy person. Really 
+amazing experience. Definitely recommend him.
