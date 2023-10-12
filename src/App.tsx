@@ -1,4 +1,4 @@
-import { faContactCard, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 
 import NavBar from './Component/NavBar/NavBar';
 

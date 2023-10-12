@@ -8,12 +8,8 @@ import bitcoin from "../../Imgs/SVGComponets/bitcoin.svg";
 import carouselDetails from './carousel.json'
 
 
-import gmail from "../../Imgs/SVGComponets/gmail.svg";
-import telegram from "../../Imgs/SVGComponets/telegram.svg";
-import facebook from "../../Imgs/SVGComponets/facebook.svg";
-import whatsapp from "../../Imgs/SVGComponets/whatsapp.svg";
-// import fiverr from "../../Imgs/SVGComponets/insta.svg";
-import insta from "../../Imgs/SVGComponets/insta.svg";
+
+
 // import upwork from "../../Imgs/SVGComponets/upwork.svg";
 import "./home.css";
 
