@@ -38,7 +38,7 @@ export default function Card(props: { item: ICard }) {
         className={Number(rating) > index ? "text-secondary" : ""}
       />
     ));
-  console.log(Number(rating), ratingItems);
+
   return (
     <div className=" drop-shadow-lg w-full h-full flex justify-center items-center p-4 pointer-events-none">
       <div className="hover:bg-[#ffff]  hover:scale-110  duration-500 rounded-md p-4 text-text      pb-4   flex flex-col align-middle items-center justify-center  h-fit bg-[#E3DFFD] border-colorid7e810469 ">

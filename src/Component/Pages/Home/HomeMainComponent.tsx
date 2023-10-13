@@ -1,37 +1,38 @@
+"use client"
 import React, { useLayoutEffect, useRef } from "react";
-import whale from "../../Imgs/SVGComponets/whale.svg";
-import fish from "../../Imgs/SVGComponets/fish.svg";
-import wave from "../../Imgs/SVGComponets/wave.svg";
-import captain from "../../Imgs/SVGComponets/captain.svg";
-import bitcoin from "../../Imgs/SVGComponets/bitcoin.svg";
+import whale from "../../../../public/Imgs/SVGComponets/whale.svg";
+import fish from "../../../../public/Imgs/SVGComponets/fish.svg";
+import wave from "../../../../public/Imgs/SVGComponets/wave.svg";
+import captain from "../../../../public/Imgs/SVGComponets/captain.svg";
+import bitcoin from "../../../../public/Imgs/SVGComponets/bitcoin.svg";
 
 import carouselDetails from "./carousel.json";
 
 import "./home.css";
 
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
-import Carousel from "../../Component/Carousel/Carousel";
+import Carousel from "../../Carousel/Carousel";
 
-import webDevelopment from "../../Imgs/services design-01.png";
-import mobileDevelopment from "../../Imgs/services design-02.png";
-import blockchainDevelopment from "../../Imgs/services design-03.png";
+import webDevelopment from "../../../../public/Imgs/services design-01.png";
+import mobileDevelopment from "../../../../public/Imgs/services design-02.png";
+import blockchainDevelopment from "../../../../public/Imgs/services design-03.png";
 
-import CASE1 from "../../Imgs/services design-04.png";
-import CASE2 from "../../Imgs/services design-05.png";
-import CASE3 from "../../Imgs/services design-06.png";
-import CASE4 from "../../Imgs/services design-07.png";
-import CASE5 from "../../Imgs/services design-08.png";
-import CASE6 from "../../Imgs/services design-09.png";
-import cantact_us from "../../Imgs/contact_us.png";
+import CASE1 from "../../../../public/Imgs/services design-04.png";
+import CASE2 from "../../../../public/Imgs/services design-05.png";
+import CASE3 from "../../../../public/Imgs/services design-06.png";
+import CASE4 from "../../../../public/Imgs/services design-07.png";
+import CASE5 from "../../../../public/Imgs/services design-08.png";
+import CASE6 from "../../../../public/Imgs/services design-09.png";
+import cantact_us from "../../../../public/Imgs/contact_us.png";
 
-import process1 from "../../Imgs/process1.png";
-import process2 from "../../Imgs/process2.png";
-import process3 from "../../Imgs/process3.png";
-import process4 from "../../Imgs/process4.png";
-import process5 from "../../Imgs/process5.png";
-import process6 from "../../Imgs/process6.png";
-import process7 from "../../Imgs/process7.png";
+import process1 from "../../../../public/Imgs/process1.png";
+import process2 from "../../../../public/Imgs/process2.png";
+import process3 from "../../../../public/Imgs/process3.png";
+import process4 from "../../../../public/Imgs/process4.png";
+import process5 from "../../../../public/Imgs/process5.png";
+import process6 from "../../../../public/Imgs/process6.png";
+import process7 from "../../../../public/Imgs/process7.png";
 
 export default function HomeMainComponent() {
   const containerRef = useRef<HTMLDivElement>(null);

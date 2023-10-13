@@ -10,8 +10,6 @@ export default function ContactUsView(props: {
 }) {
   function sendEmail(e: React.ChangeEvent<any>) {
     e.preventDefault();
-    console.log(e);
-    console.log("yes");
 
     emailjs
       .sendForm(

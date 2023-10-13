@@ -1,8 +1,8 @@
+"use client";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { NavLink } from "react-router-dom";
-import logo from "../../Imgs/logo.svg";
+// import logo from "../Imgs/logo.svg";
 import ContactUsView from "../ContactUsView/ContactUsView";
 import "./styles.css";
 
@@ -23,9 +23,9 @@ export default function NavBar() {
         />
       </div>
       <div className="bg-colorid5658bf4e flex-row h-nav md:items-center justify-between   flex md:justify-center">
-        <NavLink to="/">
+        {/* <NavLink to="/">
           <img src={logo} className="h-10 md:mt-0 mt-2 mb-2  " alt="" />
-        </NavLink>
+        </NavLink> */}
 
         <FontAwesomeIcon
           icon={faBars}
