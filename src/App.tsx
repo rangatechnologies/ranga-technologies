@@ -1,5 +1,5 @@
 import NavBar from "./Component/NavBar/NavBar";
-import Pages from "./Pages/Pages.rout";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <NavBar />
       </div>
       <div className="overflow-hidden h-fit">
-        <Pages />
+        <Home />
 
         <footer className="bg-primary w-full text-colorid4e749ecb justify-center items-center flex flex-col py-12">
           <div className="flex  flex-col text-center items-center font-bold text-3xl">
