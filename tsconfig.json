@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+  "paths": {
+    "Imgs/*": ["public/Imgs/*"]
+  },
     "target": "es5",
     "lib": [
       "dom",

@@ -1,11 +1,11 @@
 "use client"
 import React, { useLayoutEffect, useRef } from "react";
-import whale from "../../../../public/Imgs/SVGComponets/whale.svg";
+import whale from '../../../../public/Imgs/SVGComponets/whale.svg';
 import fish from "../../../../public/Imgs/SVGComponets/fish.svg";
 import wave from "../../../../public/Imgs/SVGComponets/wave.svg";
 import captain from "../../../../public/Imgs/SVGComponets/captain.svg";
 import bitcoin from "../../../../public/Imgs/SVGComponets/bitcoin.svg";
-
+import Image from 'next/image'
 import carouselDetails from "./carousel.json";
 
 import "./home.css";
@@ -14,8 +14,8 @@ import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 import Carousel from "../../Carousel/Carousel";
 
-import webDevelopment from "../../../../public/Imgs/services design-01.png";
-import mobileDevelopment from "../../../../public/Imgs/services design-02.png";
+import webDevelopment from "../../../../public/Imgs/services design-01.jpg";
+import mobileDevelopment from "../../../../public/Imgs/services design-02.jpg";
 import blockchainDevelopment from "../../../../public/Imgs/services design-03.png";
 
 import CASE1 from "../../../../public/Imgs/services design-04.png";
@@ -33,6 +33,7 @@ import process4 from "../../../../public/Imgs/process4.png";
 import process5 from "../../../../public/Imgs/process5.png";
 import process6 from "../../../../public/Imgs/process6.png";
 import process7 from "../../../../public/Imgs/process7.png";
+import NavBar from "src/Component/NavBar/NavBar";
 
 export default function HomeMainComponent() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,6 +84,7 @@ export default function HomeMainComponent() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry]);
 
+  
   const mainTitle = (
     <div className="text-secondary text-4xl md:text-5xl font-black">
       <span style={{ color: "#ABEA7C" }}>Web</span>
@@ -104,7 +106,9 @@ export default function HomeMainComponent() {
     </div>
   );
   return (
+
     <div>
+
       <div
         ref={containerRef}
         className="w-full h-screen md:h-homeBaner bg-gradient-to-t overflow-hidden from-gradiant2 to-gradiant1 flex justify-start flex-col items-center"
@@ -129,12 +133,13 @@ export default function HomeMainComponent() {
                     width: 175,
                   }}
                 >
-                  <img
-                    alt=""
-                    src={captain}
-                    style={{ height: 130 }}
-                    className=""
-                  />
+  
+                      <Image
+      src="Imgs/SVGComponets/captain.svg"
+      width={500}
+      height={500}
+      alt="Picture of the author"
+    />
                 </div>
                 <div
                   style={{
@@ -260,12 +265,14 @@ export default function HomeMainComponent() {
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
                 >
-                  <img
-                    alt=""
-                    src={captain}
-                    style={{ height: 130 }}
-                    className=""
-                  />
+                  <Image
+      src="Imgs/SVGComponets/captain.svg"
+      width={500}
+      height={500}
+      alt="Picture of the author"
+    />
+
+              
                 </div>
                 <div
                   style={{
@@ -385,14 +392,20 @@ export default function HomeMainComponent() {
             />
           </div>
           <div ref={whaleRef} className="w-full flex justify-end h-0 z-10">
-            <img
+          <Image
+                          src="/Imgs/SVGComponets/whale.svg"
+                          alt="Description of the image"
+                          width={500}
+                          height={500}
+                        />
+            {/* <img
               src={whale}
               style={{
                 height: 356,
               }}
               alt=""
               className="animate-whale-intro p-7 md:p-0"
-            />
+            /> */}
           </div>
           <div
             className="w-full flex p-7 md:p-0 justify-end md:justify-center h-0 z-20"
@@ -459,10 +472,16 @@ export default function HomeMainComponent() {
           {/* Box 1 */}
 
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={CASE1}
-            />
+            /> */}
+            <Image
+                src="/Imgs/case 01.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="text-xl text-center ml-2 mt-2 underline font-semibold mb-2">
               MindBox
             </h2>
@@ -473,10 +492,16 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={CASE2}
-            />
+            /> */}
+            <Image
+                src="/Imgs/case 02.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
               Binance Fast Bot
             </h2>
@@ -488,10 +513,16 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={CASE3}
-            />
+            /> */}
+            <Image
+                src="/Imgs/case 03.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
               MegaMarket
             </h2>
@@ -502,10 +533,16 @@ export default function HomeMainComponent() {
 
           {/* Box 4 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={CASE4}
-            />
+            /> */}
+            <Image
+                src="/Imgs/case 04.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
               MTF Trading Strategy
             </h2>
@@ -516,10 +553,16 @@ export default function HomeMainComponent() {
           </div>
           {/* Box 5 */}
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={CASE5}
-            />
+            /> */}
+            <Image
+                src="/Imgs/case 05.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
               Volume Bot
             </h2>
@@ -531,10 +574,16 @@ export default function HomeMainComponent() {
 
           {/* Box 6 */}
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={CASE6}
-            />
+            /> */}
+            <Image
+                src="/Imgs/case 06.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
               Flashloan Bot
             </h2>
@@ -562,10 +611,16 @@ export default function HomeMainComponent() {
               <div className=" flex ">
                 {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
               </div>
-              <img
-                className="hover:animate-pulse transform transition-all "
-                src={webDevelopment}
-              />
+                  <div>
+                    {/* Specify the path to the image within the public directory */}
+                    <Image
+                          src="/Imgs/services 01.png"
+                          alt="Description of the image"
+                          width={500}
+                          height={500}
+                        />
+
+                          </div>
               <div className="  ">
                 <h2 className="text-4xl font-bold mb-3 mt-3 ">Web</h2>
                 <h2 className=" text-4xl font-bold mb-3 mt-3 ">Development</h2>
@@ -575,10 +630,12 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff] ">
-            <img
-              className="hover:animate-pulse transform transition-all "
-              src={mobileDevelopment}
-            />
+            <Image
+                          src="/Imgs/services 02.png"
+                          alt="Description of the image"
+                          width={500}
+                          height={500}
+                        />
             <h2 className="text-4xl font-bold mb-3 mt-3 ">
               Mobile App Development
             </h2>
@@ -586,11 +643,12 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff]">
-            <img
-              className="hover:animate-pulse transform transition-all "
-              src={blockchainDevelopment}
-              alt=""
-            />
+          <Image
+                          src="/Imgs/services 03.png"
+                          alt="Description of the image"
+                          width={500}
+                          height={500}
+                        />
             <h2 className="text-4xl font-bold mb-3 mt-3 ">
               Blockchain Development
             </h2>
@@ -611,9 +669,15 @@ export default function HomeMainComponent() {
 
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
             <div className="inline-block">
-              <img
+              {/* <img
                 className="hover:animate-pulse transform transition-all "
                 src={process1}
+              /> */}
+              <Image
+                src="/Imgs/process1.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
               />
               <div className="  ">
                 <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
@@ -629,10 +693,16 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0] ">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={process2}
-            />
+            /> */}
+            <Image
+                src="/Imgs/process2.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
               2. UI/UX Design
             </h2>
@@ -644,11 +714,17 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0]">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={process3}
               alt=""
-            />
+            /> */}
+            <Image
+                src="/Imgs/process3.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
               3. Prototype
             </h2>
@@ -660,11 +736,17 @@ export default function HomeMainComponent() {
 
           {/* Box 4 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0]">
-            <img
+            {/* <img
               className="hover:animate-pulse transform transition-all "
               src={process4}
               alt=""
-            />
+            /> */}
+            <Image
+                src="/Imgs/process4.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
               4. Development
             </h2>
@@ -678,9 +760,15 @@ export default function HomeMainComponent() {
           {/* Box 5 */}
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
             <div className="inline-block">
-              <img
+              {/* <img
                 className="hover:animate-pulse transform transition-all "
                 src={process5}
+              /> */}
+              <Image
+                src="/Imgs/process5.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
               />
               <div className="  ">
                 <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
@@ -697,9 +785,15 @@ export default function HomeMainComponent() {
           {/* Box 6 */}
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
             <div className="inline-block">
-              <img
+              {/* <img
                 className="hover:animate-pulse transform transition-all "
                 src={process6}
+              /> */}
+              <Image
+                src="/Imgs/process6.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
               />
               <div className="  ">
                 <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
@@ -716,9 +810,15 @@ export default function HomeMainComponent() {
           {/* Box 7 */}
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
             <div className="inline-block">
-              <img
+              {/* <img
                 className="hover:animate-pulse transform transition-all "
                 src={process7}
+              /> */}
+              <Image
+                src="/Imgs/process7.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
               />
               <div className="  ">
                 <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
@@ -751,10 +851,16 @@ export default function HomeMainComponent() {
 
       <div className="grid grid-cols-5 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF]">
         <div className="col-span-2 ">
-          <img
+          {/* <img
             className="hover:animate-pulse transform transition-all "
             src={cantact_us}
-          />
+          /> */}
+          <Image
+                src="/Imgs/contact_us.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
         </div>
         <div className="col-span-3 ">
           {/* about you */}

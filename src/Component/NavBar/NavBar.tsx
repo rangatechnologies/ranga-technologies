@@ -5,6 +5,9 @@ import React from "react";
 // import logo from "../Imgs/logo.svg";
 import ContactUsView from "../ContactUsView/ContactUsView";
 import "./styles.css";
+import Image from 'next/image'
+
+
 
 export default function NavBar() {
   const [mobileMenu, setMobileMenu] = React.useState(false);
@@ -25,7 +28,16 @@ export default function NavBar() {
       <div className="bg-colorid5658bf4e flex-row h-nav md:items-center justify-between   flex md:justify-center">
         {/* <NavLink to="/">
           <img src={logo} className="h-10 md:mt-0 mt-2 mb-2  " alt="" />
-        </NavLink> */}
+          </NavLink> */}
+        <div>
+         <Image
+        src="Imgs/logo.svg"
+        width={200}
+        height={500}
+        alt="Picture of the author"
+      />
+      </div>
+
 
         <FontAwesomeIcon
           icon={faBars}
