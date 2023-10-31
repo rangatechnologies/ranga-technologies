@@ -26,6 +26,7 @@ export default function HomeMainComponent() {
   const waveRef = useRef<HTMLImageElement>(null);
 
 
+  
   const [isClient, setIsClient] = useState(false);
   // let wind_width ='370px';
 
