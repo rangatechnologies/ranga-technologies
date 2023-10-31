@@ -1,12 +1,16 @@
 "use client"
 import React, { useLayoutEffect, useRef } from "react";
-import whale from '../../../../public/Imgs/SVGComponets/whale.svg';
-import fish from "../../../../public/Imgs/SVGComponets/fish.svg";
-import wave from "../../../../public/Imgs/SVGComponets/wave.svg";
-import captain from "../../../../public/Imgs/SVGComponets/captain.svg";
-import bitcoin from "../../../../public/Imgs/SVGComponets/bitcoin.svg";
+import { useEffect, useState } from 'react';
+// import whale from '../../../../public/Imgs/SVGComponets/whale.svg';
+// import fish from "../../../../public/Imgs/SVGComponets/fish.svg";
+// import wave from "../../../../public/Imgs/SVGComponets/wave.svg";
+// import captain from "../../../../public/Imgs/SVGComponets/captain.svg";
+// import bitcoin from "../../../../public/Imgs/SVGComponets/bitcoin.svg";
 import Image from 'next/image'
 import carouselDetails from "./carousel.json";
+import SpliceBall from "../../SplineBall/index";
+import SpliceBall_Mobile from "../../SplineBall/index mobile";
+import CroppedVideoPlayer from '../../VideoPlayer/videoPlayer';
 
 import "./home.css";
 
@@ -14,75 +18,64 @@ import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 import Carousel from "../../Carousel/Carousel";
 
-import webDevelopment from "../../../../public/Imgs/services design-01.jpg";
-import mobileDevelopment from "../../../../public/Imgs/services design-02.jpg";
-import blockchainDevelopment from "../../../../public/Imgs/services design-03.png";
-
-import CASE1 from "../../../../public/Imgs/services design-04.png";
-import CASE2 from "../../../../public/Imgs/services design-05.png";
-import CASE3 from "../../../../public/Imgs/services design-06.png";
-import CASE4 from "../../../../public/Imgs/services design-07.png";
-import CASE5 from "../../../../public/Imgs/services design-08.png";
-import CASE6 from "../../../../public/Imgs/services design-09.png";
-import cantact_us from "../../../../public/Imgs/contact_us.png";
-
-import process1 from "../../../../public/Imgs/process1.png";
-import process2 from "../../../../public/Imgs/process2.png";
-import process3 from "../../../../public/Imgs/process3.png";
-import process4 from "../../../../public/Imgs/process4.png";
-import process5 from "../../../../public/Imgs/process5.png";
-import process6 from "../../../../public/Imgs/process6.png";
-import process7 from "../../../../public/Imgs/process7.png";
-import NavBar from "src/Component/NavBar/NavBar";
-
 export default function HomeMainComponent() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  // const containerRef = useRef<HTMLDivElement>(null);
   const btcRef = useRef<HTMLImageElement>(null);
   const whaleRef = useRef<HTMLImageElement>(null);
   const fishRef = useRef<HTMLImageElement>(null);
   const waveRef = useRef<HTMLImageElement>(null);
 
-  const entry = useIntersectionObserver(containerRef, {});
 
-  const renderAnimation = (
-    ev: MouseEvent | { clientX: number; clientY: number }
-  ) => {
-    const { clientX: x, clientY: y } = ev;
+  const [isClient, setIsClient] = useState(false);
 
-    btcRef.current!.style.transform = `translate(${-30 + x / 200}px, ${
-      180 + -y / 200
-    }px)`;
+  const wind_width = window.innerWidth < 768 ? '360px' : '370px'
 
-    whaleRef.current!.style.transform = `translate(${-100 + +x / 100}px, ${
-      250 + -y / 100
-    }px)`;
+  useEffect(() => {
+    // This code will run after the component mounts on the client side
+    setIsClient(true);
+  }, []);
 
-    fishRef.current!.style.transform = `translate(${-50 + x / 20}px, ${
-      500 + -y / 20
-    }px)`;
+  // const entry = useIntersectionObserver(containerRef, {});
 
-    waveRef.current!.style.transform = `translate(${10 + x / 10}px, ${
-      300 + -y / 10
-    }px)`;
-  };
+  // const renderAnimation = (
+  //   ev: MouseEvent | { clientX: number; clientY: number }
+  // ) => {
+  //   const { clientX: x, clientY: y } = ev;
 
-  const mouseMoveHandler = (ev: MouseEvent) => {
-    window.requestAnimationFrame(() => renderAnimation(ev));
-  };
+  //   btcRef.current!.style.transform = `translate(${-30 + x / 200}px, ${
+  //     180 + -y / 200
+  //   }px)`;
 
-  useLayoutEffect(() => {
-    renderAnimation({ clientX: 0, clientY: 0 });
-    setTimeout(() => {
-      if (entry?.isIntersecting) {
-        window.addEventListener("mousemove", mouseMoveHandler);
-      }
-    }, 2000); // trigger after fading animation end
+  //   whaleRef.current!.style.transform = `translate(${-100 + +x / 100}px, ${
+  //     250 + -y / 100
+  //   }px)`;
 
-    return () => {
-      window.removeEventListener("mousemove", mouseMoveHandler);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [entry]);
+  //   fishRef.current!.style.transform = `translate(${-50 + x / 20}px, ${
+  //     500 + -y / 20
+  //   }px)`;
+
+  //   waveRef.current!.style.transform = `translate(${10 + x / 10}px, ${
+  //     300 + -y / 10
+  //   }px)`;
+  // };
+
+  // const mouseMoveHandler = (ev: MouseEvent) => {
+  //   window.requestAnimationFrame(() => renderAnimation(ev));
+  // };
+
+  // useLayoutEffect(() => {
+  //   renderAnimation({ clientX: 0, clientY: 0 });
+  //   setTimeout(() => {
+  //     if (entry?.isIntersecting) {
+  //       window.addEventListener("mousemove", mouseMoveHandler);
+  //     }
+  //   }, 2000); // trigger after fading animation end
+
+  //   return () => {
+  //     window.removeEventListener("mousemove", mouseMoveHandler);
+  //   };
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [entry]);
 
   
   const mainTitle = (
@@ -106,17 +99,25 @@ export default function HomeMainComponent() {
     </div>
   );
   return (
+    
 
     <div>
+      
 
-      <div
-        ref={containerRef}
-        className="w-full h-screen md:h-homeBaner bg-gradient-to-t overflow-hidden from-gradiant2 to-gradiant1 flex justify-start flex-col items-center"
-      >
+      <div 
+        // ref={containerRef}
+         className="w-full h-screen bg-gradient-to-t overflow-hidden from-gradiant2 to-gradiant1 flex justify-start flex-col items-center">
+      
         <div className="max-w-6xl justify-center flex items-start flex-col  w-full">
+        
           <div className="w-full h-40 md:h-0 flex md:flex-row flex-col overflow-visible font-sans items-center md:items-start">
+
+          
+
+
             {/* Web @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/}
             <div className=" hidden md:flex   z-50">
+              
               <div
                 className="border-primary rounded-full flex overflow-visible justify-center items-center"
                 style={{
@@ -125,21 +126,24 @@ export default function HomeMainComponent() {
                   borderWidth: 15,
                   transform: `translate(${10}px, ${0}px)`,
                 }}
+                
               >
+                
                 <div
-                  className="bg-primary drop-shadow-2xl md:h-avatar md:w-avatar hidden md:flex items-center p-1 rounded-full"
+                  className="bg-primary drop-shadow-2xl md:h-700 md:w-avatar hidden md:flex items-center p-1 rounded-full"
                   style={{
                     transform: `translate(${-70}px, ${-100}px)`,
-                    width: 175,
-                  }}
-                >
-  
-                      <Image
-      src="Imgs/SVGComponets/captain.svg"
-      width={500}
-      height={500}
-      alt="Picture of the author"
-    />
+                    width: 200,
+                  }}>
+                     <Image className="bg-primary drop-shadow-2xl md:h-avatar md:w-avatar hidden md:flex items-center p-1 rounded-full"
+                      src="/langing_page_v2.gif"
+                      width={200}
+                      height={200}
+                      // layout="fill"
+                      //   objectFit="contain"
+                      alt="Picture of the author"
+                    />      
+                                   
                 </div>
                 <div
                   style={{
@@ -153,6 +157,7 @@ export default function HomeMainComponent() {
                   <div className="pt-3 text-colorid7e810469 font-normal">
                     Lets Talk:
                   </div>
+                  
                   <div style={{ paddingBottom: 20, paddingTop: 10 }}>
                     <button
                       onClick={() => window.open("ranganaupul@gmail.com")}
@@ -160,7 +165,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#ea4335]"
+                          className=" hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#ea4335]"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                         >
@@ -178,7 +183,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className=" hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#0088cc]"
+                          className="  h-7 w-7 fill-primary hover:fill-[#0088cc]"
                           fill="currentColor"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +203,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#1877f2]"
+                          className=" hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#1877f2]"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="currentColor"
                           viewBox="0 0 24 24"
@@ -217,7 +222,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#c13584]"
+                          className="  hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#c13584]"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="currentColor"
                           viewBox="0 0 24 24"
@@ -235,7 +240,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#128c7e]"
+                          className=" hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#128c7e]"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                         >
@@ -245,8 +250,15 @@ export default function HomeMainComponent() {
                     </button>
                   </div>
                 </div>
+                
               </div>
+              
             </div>
+
+
+
+
+
 
             {/* Mobile @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
             <div className=" md:hidden flex z-50">
@@ -260,18 +272,17 @@ export default function HomeMainComponent() {
                 }}
               >
                 <div
-                  className="bg-primary flex mt-8 h-24 w-24 items-center p-1 rounded-full"
+                  className="flex  h-20 w-30 items-center p-1 rounded-full rounded-circle"
                   style={{
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
                 >
-                  <Image
-      src="Imgs/SVGComponets/captain.svg"
-      width={500}
-      height={500}
-      alt="Picture of the author"
-    />
-
+                  <Image className="bg-primary  mt-8 h-24 w-24 items-center p-2 rounded-full"
+                        src="/langing_page_v2.gif"
+                        width={500}
+                        height={500}
+                        alt="Picture of the author"
+                      />
               
                 </div>
                 <div
@@ -293,7 +304,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#ea4335]"
+                          className="  hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#ea4335]"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                         >
@@ -311,7 +322,8 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className=" hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#0088cc]"
+                          className=" hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#0088cc]"
+
                           fill="currentColor"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -331,7 +343,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#1877f2]"
+                          className="  hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#1877f2]"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="currentColor"
                           viewBox="0 0 24 24"
@@ -350,7 +362,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#c13584]"
+                          className="  hover:duration-300 transform w-7 h-7 fill-primary hover:fill-[#c13584]"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="currentColor"
                           viewBox="0 0 24 24"
@@ -368,7 +380,7 @@ export default function HomeMainComponent() {
                     >
                       <div>
                         <svg
-                          className="hover:animate-bounce hover:h-10 hover:w-10 hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#128c7e]"
+                          className="  hover:duration-300 transform h-7 w-7 fill-primary hover:fill-[#128c7e]"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                         >
@@ -381,7 +393,20 @@ export default function HomeMainComponent() {
               </div>
             </div>
           </div>
-          <div ref={btcRef} className="w-full flex  justify-end h-0 z-0">
+
+
+            {/* Mobile END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
+
+
+
+
+
+
+
+
+
+
+          {/* <div ref={btcRef} className="w-full flex  justify-end h-0 z-0">
             <img
               src={bitcoin}
               style={{
@@ -390,7 +415,19 @@ export default function HomeMainComponent() {
               className="animate-bitcoin-intro p-4 md:p-0"
               alt=""
             />
-          </div>
+          </div> */}
+          <div>
+
+
+
+          {isClient && window.innerWidth >= 768 && <SpliceBall />}
+          
+          
+
+        </div>
+        
+
+        
           <div ref={whaleRef} className="w-full flex justify-end h-0 z-10">
           <Image
                           src="/Imgs/SVGComponets/whale.svg"
@@ -407,7 +444,7 @@ export default function HomeMainComponent() {
               className="animate-whale-intro p-7 md:p-0"
             /> */}
           </div>
-          <div
+          {/* <div
             className="w-full flex p-7 md:p-0 justify-end md:justify-center h-0 z-20"
             ref={fishRef}
           >
@@ -429,8 +466,9 @@ export default function HomeMainComponent() {
               className="animate-wave-intro"
               alt=""
             />
-          </div>
+          </div> */}
         </div>
+        {isClient && window.innerWidth < 768 && <SpliceBall_Mobile />}
       </div>
 
       <br />
@@ -447,68 +485,96 @@ export default function HomeMainComponent() {
               width="1280"
               height="720"
               title="vimeo-player"
-              src="https://player.vimeo.com/video/848486988?h=9a9f238f24?rel=0&autoplay=1&mute=1"
+              src="https://player.vimeo.com/video/868666920?h=9a9f238f24?rel=0&autoplay=0&mute=0"
+              // https://player.vimeo.com/video/868666920
               allow="autoplay; encrypted-media"
             ></iframe>
           </div>
         </div>
+        
       </div>
 
-      <h1 className=" text-4xl text-center font-sans font-bold ">
-        What Our Clients Say
-      </h1>
-      <section>
-        <Carousel details={carouselDetails} />
-      </section>
+
+
+      
+      <div className="container mx-auto py-8 bg-[#ffffff]">
+
 
       {/* Use Cases */}
-      <div className="container mx-auto py-8 bg-[#ffffff]">
-        <h1 className=" text-4xl text-center font-sans font-bold ">
-          Use Cases
+      
+      <div>
+      <h1 className=" text-4xl text-center font-sans font-bold ">
+        Tailoring Tech for Every Unique Endeavor
         </h1>
+        <br />
+      
+      {/* 01 Web Development Showcase */}
+      <div>
+        <h3 className=" text-2xl text-center font-sans font-bold ">
+            Web Development Showcase
+            </h3>
+        <br />
         <br />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
           {/* Box 1 */}
 
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE1}
-            /> */}
-            <Image
-                src="/Imgs/case 01.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-              />
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
+          <div>
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_1.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+            </div>
+
+
+
             <h2 className="text-xl text-center ml-2 mt-2 underline font-semibold mb-2">
-              MindBox
+            Premium Car Rental Platform
             </h2>
-            <p className="text-center  ml-2">
-              Redesigning an automated marketing platform by using flutter.
-            </p>
+            
+            <div className="text-center  ml-2">
+            Streamlined luxury car rentals with an exclusive online platform with React JS
+            </div>
           </button>
 
           {/* Box 2 */}
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE2}
-            /> */}
-            <Image
-                src="/Imgs/case 02.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-              />
+          <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
+          <div >
+
+                        <CroppedVideoPlayer
+                          videoPath="/videos/project_2.mp4"
+                          
+                          cropArea={{
+                            width: wind_width,
+                            height: '300px',
+                            top: '0px',
+                            left: '0px',
+                            borderRadiusTop: '10px',
+                            borderRadiusBottom: '10px',
+                            startTime: 0,
+
+                          }}
+                              />
+                        </div>
+
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
-              Binance Fast Bot
+            Tailored E-Learning Website
             </h2>
-            <p className=" ml-2 text-center">
-              Develop clinet strategy idea on Tradingview and automate those
-              signals on Binance exchange.
-            </p>
+            <div className=" ml-2 text-center">
+            Cutting-edge E-Learning Website Development, powered by Next JS.
+            </div>
           </button>
 
           {/* Box 3 */}
@@ -517,83 +583,368 @@ export default function HomeMainComponent() {
               className="hover:animate-pulse transform transition-all "
               src={CASE3}
             /> */}
-            <Image
-                src="/Imgs/case 03.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-              />
-            <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
-              MegaMarket
-            </h2>
-            <p className="ml-2 text-center">
-              Developing one of the largest e-Commerce platforms for consumer.
-            </p>
-          </div>
+            <div >
 
-          {/* Box 4 */}
+            <CroppedVideoPlayer
+              videoPath="/videos/project_3.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 1,
+
+              }}
+                  />
+    </div>
+            {/* <Image
+                src="/project_3.gif"
+                width={300}
+                height={300}
+                alt="Picture of the author"
+              /> */}
+            <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
+            Smoking Vape Hub
+            </h2>
+            <div className="ml-2 text-center">
+            Demonstrating expertise in Vape Site development, powered by React JS.
+            </div>
+          </div>
+          </div>
+      </div>
+      
+      
+      {/* 02 Dashboard Solutions */}
+      <div>
+        <br />
+        <br />
+        <h3 className=" text-2xl text-center font-sans font-bold ">
+        Dashboard Solutions
+            </h3>
+        <br />
+        <br />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
+          {/* Box 1 */}
+
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
+          <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_4.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+            </div>
+
+
+
+            <h2 className="text-xl text-center ml-2 mt-2 underline font-semibold mb-2">
+            TradingBot Dashboard
+            </h2>
+            
+            <div className="text-center  ml-2">
+            Crafting advanced trading dashboards with precision and efficiency.
+            </div>
+          </button>
+
+          {/* Box 2 */}
+          <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
+          <div >
+
+                        <CroppedVideoPlayer
+                          videoPath="/videos/project_5.mp4"
+                          
+                          cropArea={{
+                            width: wind_width,
+                            height: '300px',
+                            top: '0px',
+                            left: '0px',
+                            borderRadiusTop: '10px',
+                            borderRadiusBottom: '10px',
+                            startTime: 0,
+
+                          }}
+                              />
+                        </div>
+
+            <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
+            ProjectFlow Dashboard
+            </h2>
+            <div className=" ml-2 text-center">
+            Efficient project management through our intuitive dashboard development expertise.
+            </div>
+          </button>
+
+          {/* Box 3 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
             {/* <img
               className="hover:animate-pulse transform transition-all "
-              src={CASE4}
+              src={CASE3}
             /> */}
-            <Image
-                src="/Imgs/case 04.png"
-                width={500}
-                height={500}
+            <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_6.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+    </div>
+            {/* <Image
+                src="/project_3.gif"
+                width={300}
+                height={300}
                 alt="Picture of the author"
-              />
+              /> */}
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
-              MTF Trading Strategy
+            EduHub Management Dashboard
             </h2>
-            <p className="ml-2 text-center">
-              Multi time frame trading strategy development based on clinet
-              strategy idea.
-            </p>
+            <div className="ml-2 text-center">
+            Seamless student, teacher, and tutor management system development expertise.
+            </div>
           </div>
-          {/* Box 5 */}
+          </div>
+      </div>
+
+
+      {/* 03 Mobile App Innovation */}
+      <div>
+        <br />
+        <br />
+        <h3 className=" text-2xl text-center font-sans font-bold ">
+        Mobile App Innovation
+            </h3>
+        <br />
+        <br />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
+          {/* Box 1 */}
+
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE5}
-            /> */}
-            <Image
-                src="/Imgs/case 05.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-              />
-            <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
-              Volume Bot
+          <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_7.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+            </div>
+
+
+
+            <h2 className="text-xl text-center ml-2 mt-2 underline font-semibold mb-2">
+            TravelUP Mobile App
             </h2>
-            <p className="ml-2 text-center">
-              Develop volume bot to increase token volume by using market making
-              account for token owner.
-            </p>
+            
+            <div className="text-center  ml-2">
+            Crafting an intuitive travel and tour booking experience, powered by Flutter.
+            </div>
           </button>
 
-          {/* Box 6 */}
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
+          {/* Box 2 */}
+          <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
+          <div >
+
+                        <CroppedVideoPlayer
+                          videoPath="/videos/project_8.mp4"
+                          
+                          cropArea={{
+                            width: wind_width,
+                            height: '300px',
+                            top: '0px',
+                            left: '0px',
+                            borderRadiusTop: '10px',
+                            borderRadiusBottom: '10px',
+                            startTime: 0,
+
+                          }}
+                              />
+                        </div>
+
+            <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
+            FlutterDev Delivery Management
+            </h2>
+            <div className=" ml-2 text-center">
+            Efficient delivery system development with precision, powered by Flutter.
+            </div>
+          </button>
+
+          {/* Box 3 */}
+          <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
             {/* <img
               className="hover:animate-pulse transform transition-all "
-              src={CASE6}
+              src={CASE3}
             /> */}
-            <Image
-                src="/Imgs/case 06.png"
-                width={500}
-                height={500}
+            <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_9.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+    </div>
+            {/* <Image
+                src="/project_3.gif"
+                width={300}
+                height={300}
                 alt="Picture of the author"
-              />
-            <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
-              Flashloan Bot
+              /> */}
+            <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
+            FlutterSky Booking App
             </h2>
-            <p className="ml-2 text-center">
-              Flashloan Bot Development for Uniswap and SushiSwap by using loan
-              funds.
-            </p>
+            <div className="ml-2 text-center">
+            Seamless airline booking, highlighted by customer reviews, powered by Flutter.
+            </div>
+          </div>
+          </div>
+          <br />
+          <br />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
+          {/* Box 1 */}
+
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
+          <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_10.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+            </div>
+
+
+
+            <h2 className="text-xl text-center ml-2 mt-2 underline font-semibold mb-2">
+            FlutterPlats Mobile App
+            </h2>
+            
+            <div className="text-center  ml-2">
+            Efficient plats management on-the-go, powered by Flutter.
+            </div>
           </button>
-        </div>
+
+          {/* Box 2 */}
+          <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
+          <div >
+
+                        <CroppedVideoPlayer
+                          videoPath="/videos/project_11.mp4"
+                          
+                          cropArea={{
+                            width: wind_width,
+                            height: '300px',
+                            top: '0px',
+                            left: '0px',
+                            borderRadiusTop: '10px',
+                            borderRadiusBottom: '10px',
+                            startTime: 0,
+
+                          }}
+                              />
+                        </div>
+
+            <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
+            Tailored E-Learning Website
+            </h2>
+            <div className=" ml-2 text-center">
+            E-Learning Website Development by Next JS
+            </div>
+          </button>
+
+          {/* Box 3 */}
+          <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
+            {/* <img
+              className="hover:animate-pulse transform transition-all "
+              src={CASE3}
+            /> */}
+            <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/project_12.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+    </div>
+            {/* <Image
+                src="/project_3.gif"
+                width={300}
+                height={300}
+                alt="Picture of the author"
+              /> */}
+            <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
+            FlutterTrade Mobile App
+            </h2>
+            <div className="ml-2 text-center">
+            Efficient trading management on-the-go, powered by Flutter.
+            </div>
+          </div>
+          </div>
+
+
       </div>
+
+      </div>
+
+
+
+
 
       {/* Service we offer */}
       <div className="container mx-auto py-8 bg-[#ffffff]">
@@ -611,47 +962,90 @@ export default function HomeMainComponent() {
               <div className=" flex ">
                 {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
               </div>
-                  <div>
-                    {/* Specify the path to the image within the public directory */}
-                    <Image
-                          src="/Imgs/services 01.png"
-                          alt="Description of the image"
-                          width={500}
-                          height={500}
-                        />
+              <div >
 
-                          </div>
+                <CroppedVideoPlayer
+                  videoPath="/videos/service_1.mp4"
+                  
+                  cropArea={{
+                    width: wind_width,
+                    height: '300px',
+                    top: '0px',
+                    left: '0px',
+                    borderRadiusTop: '10px',
+                    borderRadiusBottom: '10px',
+                    startTime: 0,
+
+                  }}
+                      />
+                </div>
               <div className="  ">
-                <h2 className="text-4xl font-bold mb-3 mt-3 ">Web</h2>
-                <h2 className=" text-4xl font-bold mb-3 mt-3 ">Development</h2>
+                <h2 className="text-2xl font-bold mb-3 mt-3 ">Web and Mobile App</h2>
+                <h2 className=" text-1xl  mb-3 mt-3 ">Crafting unified digital experiences for web, mobile, and platforms seamlessly.</h2>
               </div>
             </div>
           </button>
 
           {/* Box 2 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff] ">
-            <Image
-                          src="/Imgs/services 02.png"
-                          alt="Description of the image"
-                          width={500}
-                          height={500}
-                        />
-            <h2 className="text-4xl font-bold mb-3 mt-3 ">
-              Mobile App Development
+          <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/service_2.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+            </div>
+            <h2 className="text-2xl font-bold mb-3 mt-3 ">
+            Fintech Solutions
             </h2>
+
+
+            <h2 className="text-1xl mb-3 mt-3 ">
+            Empowering finance with cutting-edge trading solutions and secure transactions.
+            </h2>
+
+
+            
           </button>
 
           {/* Box 3 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff]">
-          <Image
-                          src="/Imgs/services 03.png"
-                          alt="Description of the image"
-                          width={500}
-                          height={500}
-                        />
-            <h2 className="text-4xl font-bold mb-3 mt-3 ">
-              Blockchain Development
+          <div >
+
+            <CroppedVideoPlayer
+              videoPath="/videos/service_3.mp4"
+              
+              cropArea={{
+                width: wind_width,
+                height: '300px',
+                top: '0px',
+                left: '0px',
+                borderRadiusTop: '10px',
+                borderRadiusBottom: '10px',
+                startTime: 0,
+
+              }}
+                  />
+                  </div>
+            <h2 className="text-2xl font-bold mb-3 mt-3 ">
+            Blockchain Development
             </h2>
+            
+            <h2 className="text-1xl mb-3 mt-3 ">
+            Empower your business with secure smart contracts and decentralized solutions.
+            </h2>
+
+            
           </button>
         </div>
       </div>
@@ -706,10 +1100,10 @@ export default function HomeMainComponent() {
             <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
               2. UI/UX Design
             </h2>
-            <p className="text-center">
+            <div className="text-center">
               We create catchy and charming designs with the latest tools of
               designing to make it a best user-friendly experience.
-            </p>
+            </div>
           </button>
 
           {/* Box 3 */}
@@ -728,10 +1122,10 @@ export default function HomeMainComponent() {
             <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
               3. Prototype
             </h2>
-            <p className="text-center">
+            <div className="text-center">
               After designing, you will get your prototype, which will be sent
               ahead for the development process for the product.
-            </p>
+            </div>
           </button>
 
           {/* Box 4 */}
@@ -750,10 +1144,10 @@ export default function HomeMainComponent() {
             <h2 className="text-1xl text-center font-bold mb-3 mt-3 ">
               4. Development
             </h2>
-            <p className="text-center">
+            <div className="text-center">
               Development of mobile application/web/blockchain started using
               latest tools and technologies with transparency.
-            </p>
+            </div>
           </button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-7  gap-12 m-auto justify-items-end">
@@ -833,6 +1227,14 @@ export default function HomeMainComponent() {
           </button>
         </div>
       </div>
+
+      <h1 className=" text-4xl text-center font-sans font-bold ">
+        What Our Clients Say
+      </h1>
+      <section>
+        <Carousel details={carouselDetails} />
+      </section>
+
       {/* Start conversetion  */}
 
       <div className="w-full  h-60 md:h-75 lg:h-48 bg-[#ECF2FF]">
@@ -844,9 +1246,9 @@ export default function HomeMainComponent() {
           Start a conversation
         </h2>
 
-        <p className=" text-center">Get in touch with us to discuss new</p>
-        <p className=" text-center">product ideas and business</p>
-        <p className=" text-center">opportunities.</p>
+        <div className=" text-center">Get in touch with us to discuss new</div>
+        <div className=" text-center">product ideas and business</div>
+        <div className=" text-center">opportunities.</div>
       </div>
 
       <div className="grid grid-cols-5 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF]">
@@ -866,9 +1268,9 @@ export default function HomeMainComponent() {
           {/* about you */}
           <div className="mt-2  lg:ml-14 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
             <div className="col-span-1 lg:col-span-1">
-              <h2 className="ml-4 text-1xl md:text-2xl lg:text-3xl text-left font-neu mb-2">
+              {/* <h2 className="ml-4 text-1xl md:text-2xl lg:text-3xl text-left font-neu mb-2">
                 About you
-              </h2>
+              </h2> */}
             </div>
             <div className="col-span-1 md:col-span-2 lg:col-span-4">
               <form className=" bg-gray-100  rounded-md">
@@ -917,9 +1319,9 @@ export default function HomeMainComponent() {
             <div className="col-span-1 md:col-span-2 lg:col-span-4">
               <form className="bg-gray-100  rounded-md">
                 <div className="mb-4 w-auto">
-                  <h2 className="mb-4">What do you want to achieve?</h2>
+                  {/* <h2 className="mb-4">What do you want to achieve?</h2> */}
 
-                  <select
+                  {/* <select
                     className="w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
                     id="country"
                     name="country"
@@ -927,16 +1329,16 @@ export default function HomeMainComponent() {
                     <option value="australia">Web Development</option>
                     <option value="canada">Mobile APP Development</option>
                     <option value="usa">Blockchain Development</option>
-                  </select>
+                  </select> */}
                 </div>
 
                 {/* <!--Default disabled checkbox--> */}
 
-                <h2 className="mt-10">What services do you need?</h2>
+                {/* <h2 className="mt-10">What services do you need?</h2> */}
 
-                {/* tick boxes */}
+                {/* tick boxes
                 <div className=" mt-4 mb-4 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-                  {/* tick box */}
+
 
                   <div className="transition-all duration-400 col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <label className="" htmlFor="">
@@ -950,7 +1352,7 @@ export default function HomeMainComponent() {
                     />
                   </div>
 
-                  {/* tick box */}
+
                   <div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <label className="" htmlFor="">
                       Trading Strategy Development
@@ -962,7 +1364,7 @@ export default function HomeMainComponent() {
                       id="flexCheckDisabled"
                     />
                   </div>
-                  {/* tick box */}
+
                   <div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <label className="" htmlFor="">
                       Volume Bot Development
@@ -974,7 +1376,7 @@ export default function HomeMainComponent() {
                       id="flexCheckDisabled"
                     />
                   </div>
-                  {/* tick box */}
+
 
                   <div className="transition-all duration-400 col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <label className="" htmlFor="">
@@ -988,7 +1390,7 @@ export default function HomeMainComponent() {
                     />
                   </div>
 
-                  {/* tick box */}
+
                   <div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <label className="" htmlFor="">
                       MOBILE DEVELOPMENT
@@ -1000,7 +1402,7 @@ export default function HomeMainComponent() {
                       id="flexCheckDisabled"
                     />
                   </div>
-                  {/* tick box */}
+
                   <div className="transition-all duration-400  col-span-1 mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <label className="" htmlFor="">
                       Blockchain Development
@@ -1012,7 +1414,7 @@ export default function HomeMainComponent() {
                       id="flexCheckDisabled"
                     />
                   </div>
-                </div>
+                </div> */}
 
                 {/* tell us about your project */}
                 <h2 className="mb-4">Tell us about your project</h2>
@@ -1037,6 +1439,8 @@ export default function HomeMainComponent() {
         </div>
         <div></div>
       </div>
+      </div>  
+      
     </div>
   );
 }

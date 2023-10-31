@@ -46,7 +46,7 @@ export default function Card(props: { item: ICard }) {
           <img
             src={avatar}
             alt="avatar"
-            className="h-24 w-24 shadow-sm rounded-full"
+            className="h-24 w-24 shadow-lg rounded-full"
           />
           <div className="flex flex-col pl-4 h-full justify-around  pt-4  ">
             <p className="text-lg font-bold">{name}</p>

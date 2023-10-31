@@ -39,11 +39,11 @@ export default function NavBar() {
       </div>
 
 
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           icon={faBars}
           className="text-colorid3b2eb70d h-6 pr-4 md:hidden mt-2"
           onClick={() => setMobileMenu(!mobileMenu)}
-        />
+        /> */}
         <div
           className={
             "fixed top-0 md:relative md:w-full md:h-full  bg-colorid5658bf4e flex-row max-w-5xl items-center flex-grow  flex transition-all right-0 overflow-hidden" +
@@ -59,11 +59,11 @@ export default function NavBar() {
                 : "hidden md:flex items-center w-full justify-center md:h-10  "
             }
           >
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faClose}
               className="absolute right-4 top-0 text-colorid3b2eb70d h-6 pr-2 md:hidden mt-2"
               onClick={() => setMobileMenu(!mobileMenu)}
-            />
+            /> */}
             <div className="flex md:flex-row bg flex-col justify-end md:h-full text-nav  w-full items-center md:items-baseline">
               <div className="md:px-4 space-x-1 flex flex-row text-colorid3b2eb70d h-12 md:h-6 text-xs font-semibold"></div>
             </div>
