@@ -27,8 +27,13 @@ export default function HomeMainComponent() {
 
 
   const [isClient, setIsClient] = useState(false);
+  let wind_width ='370px';
 
-  const wind_width = window.innerWidth < 768 ? '360px' : '370px'
+  if (window) { wind_width = window.innerWidth < 768 ? '360px' : '370px'}
+
+
+
+  
 
   useEffect(() => {
     // This code will run after the component mounts on the client side
