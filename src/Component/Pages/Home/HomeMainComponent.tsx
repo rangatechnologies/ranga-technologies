@@ -27,9 +27,9 @@ export default function HomeMainComponent() {
 
 
   const [isClient, setIsClient] = useState(false);
-  let wind_width ='370px';
+  // let wind_width ='370px';
 
-  if (window) { wind_width = window.innerWidth < 768 ? '360px' : '370px'}
+  // if (window) { wind_width = window.innerWidth < 768 ? '360px' : '370px'}
 
 
 
@@ -531,7 +531,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_1.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -562,7 +562,7 @@ export default function HomeMainComponent() {
                           videoPath="/videos/project_2.mp4"
                           
                           cropArea={{
-                            width: wind_width,
+                            width: '370px',
                             height: '300px',
                             top: '0px',
                             left: '0px',
@@ -594,7 +594,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_3.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -642,7 +642,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_4.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -673,7 +673,7 @@ export default function HomeMainComponent() {
                           videoPath="/videos/project_5.mp4"
                           
                           cropArea={{
-                            width: wind_width,
+                            width: '370px',
                             height: '300px',
                             top: '0px',
                             left: '0px',
@@ -705,7 +705,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_6.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -753,7 +753,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_7.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -784,7 +784,7 @@ export default function HomeMainComponent() {
                           videoPath="/videos/project_8.mp4"
                           
                           cropArea={{
-                            width: wind_width,
+                            width: '370px',
                             height: '300px',
                             top: '0px',
                             left: '0px',
@@ -816,7 +816,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_9.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -853,7 +853,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_10.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -884,7 +884,7 @@ export default function HomeMainComponent() {
                           videoPath="/videos/project_11.mp4"
                           
                           cropArea={{
-                            width: wind_width,
+                            width: '370px',
                             height: '300px',
                             top: '0px',
                             left: '0px',
@@ -916,7 +916,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/project_12.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -973,7 +973,7 @@ export default function HomeMainComponent() {
                   videoPath="/videos/service_1.mp4"
                   
                   cropArea={{
-                    width: wind_width,
+                    width: '370px',
                     height: '300px',
                     top: '0px',
                     left: '0px',
@@ -999,7 +999,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/service_2.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
@@ -1031,7 +1031,7 @@ export default function HomeMainComponent() {
               videoPath="/videos/service_3.mp4"
               
               cropArea={{
-                width: wind_width,
+                width: '370px',
                 height: '300px',
                 top: '0px',
                 left: '0px',
