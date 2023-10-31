@@ -141,7 +141,7 @@
     "lodash.debounce" "^4.0.8"
     "react-merge-refs" "^2.0.1"
 
-"@splinetool/runtime@*":
+"@splinetool/runtime@*", "@splinetool/runtime@^0.9.490":
   "integrity" "sha512-U/LNl1iPghtquGzocsAljcYiDDRDXcGP6BgauQkECsf4ETjY8i6FZHwupTdCbzS5R8iwMObKJwSPLmdl3USWnw=="
   "resolved" "https://registry.npmjs.org/@splinetool/runtime/-/runtime-0.9.490.tgz"
   "version" "0.9.490"
