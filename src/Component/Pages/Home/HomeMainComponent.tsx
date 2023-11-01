@@ -11,6 +11,10 @@ import carouselDetails from "./carousel.json";
 import SpliceBall from "../../SplineBall/index";
 import SpliceBall_Mobile from "../../SplineBall/index mobile";
 import CroppedVideoPlayer from '../../VideoPlayer/videoPlayer';
+import CroppedVideoPlayer_mob from '../../VideoPlayer/videoPlayer_mob';
+
+import CroppedVideoPlayer_2 from '../../VideoPlayer/videoPlayer_2';
+import CroppedVideoPlayer_demo from '../../VideoPlayer/videoPlayer_demo';
 
 import "./home.css";
 
@@ -25,7 +29,105 @@ export default function HomeMainComponent() {
   const fishRef = useRef<HTMLImageElement>(null);
   const waveRef = useRef<HTMLImageElement>(null);
 
+  // video urls
+  const customStreamVideoUrl_1 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_1.mp4';
+  const customStreamVideoUrl_2 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_2.mp4';
+  const customStreamVideoUrl_3 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_3.mp4';
+  const customStreamVideoUrl_4 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_4.mp4';
+  const customStreamVideoUrl_5 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_5.mp4';
+  const customStreamVideoUrl_6 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_6.mp4';
+  const customStreamVideoUrl_7 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_7.mp4';
+  const customStreamVideoUrl_8 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_8.mp4';
+  const customStreamVideoUrl_9 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_9.mp4';
+  const customStreamVideoUrl_10 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_10.mp4';
+  const customStreamVideoUrl_11 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_11.mp4';
+  const customStreamVideoUrl_12 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_12.mp4';
+
+  // Services
+  const customStreamVideoUrl_service_1 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_1.mp4';
+  const customStreamVideoUrl_service_2 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_2.mp4';
+  const customStreamVideoUrl_service_3 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_3.mp4';
+
+// spline and gif
+const customStreamVideoUrl_backround_animation_web = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_web.mp4';
+const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_mob.mp4';
+
+const customStreamVideoUrl_landing_hello = 'https://d1o28nvpq2ey2q.cloudfront.net/landing_hello.mp4';
+
+// ranga technologies demo
+const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfront.net/ranga_technologies.mp4';
+
+
+
+// projects prop web
+  const cropArea = {
+    width: '365px',
+    height: '300px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '10px',
+    borderRadiusBottom: '10px',
+    startTime: 0,
+  };
+
+
+
+  const cropArea_project_3 = {
+    width: '365px',
+    height: '300px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '10px',
+    borderRadiusBottom: '10px',
+    startTime: 2,
+  };
+
+  // gif prop web
+  const cropArea_gif_web = {
+    width: '132px',
+    height: '132px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '100px',
+    borderRadiusBottom: '100px',
+    startTime: 0,
+  };
+  // gif prop mob
+  const cropArea_gif_mob = {
+    width: '90px',
+    height: '90px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '100px',
+    borderRadiusBottom: '100px',
+    startTime: 0,
+  };
   
+  // ranga technologies demo
+  const cropArea_demo = {
+    width: '1250px',
+    height: '600px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '20px',
+    borderRadiusBottom: '20px',
+    startTime: 0,
+  };
+
+    // ranga technologies demo
+    const cropArea_demo_mob = {
+      width: '390px',
+      height: '280px',
+      top: '0px',
+      left: '0px',
+      borderRadiusTop: '20px',
+      borderRadiusBottom: '20px',
+      startTime: 0,
+    };
+
+
+
+
 
   const [isClient, setIsClient] = useState(false);
   // let wind_width ='370px';
@@ -34,7 +136,7 @@ export default function HomeMainComponent() {
 
 
 
-  
+
 
   useEffect(() => {
     // This code will run after the component mounts on the client side
@@ -109,6 +211,7 @@ export default function HomeMainComponent() {
 
     <div>
       
+      
 
       <div 
         // ref={containerRef}
@@ -141,14 +244,10 @@ export default function HomeMainComponent() {
                     transform: `translate(${-70}px, ${-100}px)`,
                     width: 200,
                   }}>
-                     <Image className="bg-primary drop-shadow-2xl md:h-avatar md:w-avatar hidden md:flex items-center p-1 rounded-full"
-                      src="/langing_page_v2.gif"
-                      width={200}
-                      height={200}
-                      // layout="fill"
-                      //   objectFit="contain"
-                      alt="Picture of the author"
-                    />      
+
+                  <div>
+                <CroppedVideoPlayer_2 videoPath={customStreamVideoUrl_landing_hello} cropArea={cropArea_gif_web} />
+                </div>    
                                    
                 </div>
                 <div
@@ -278,17 +377,14 @@ export default function HomeMainComponent() {
                 }}
               >
                 <div
-                  className="flex  h-20 w-30 items-center p-1 rounded-full rounded-circle"
+                  className="flex mt-6  h-20 w-30 items-center p-1 rounded-full rounded-circle"
                   style={{
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
                 >
-                  <Image className="bg-primary  mt-8 h-24 w-24 items-center p-2 rounded-full"
-                        src="/langing_page_v2.gif"
-                        width={500}
-                        height={500}
-                        alt="Picture of the author"
-                      />
+                  <div >
+                  <CroppedVideoPlayer_2 videoPath={customStreamVideoUrl_landing_hello} cropArea={cropArea_gif_mob} />
+                  </div>
               
                 </div>
                 <div
@@ -485,16 +581,17 @@ export default function HomeMainComponent() {
           {/* Box 1 */}
 
           <div className="drop-shadow-lg max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl rounded lg:p-4 bg-[#B1B2FF]   ">
-            <iframe
-              className="  w-full  flex  rounded"
-              frameBorder="0"
-              width="1280"
-              height="720"
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/868666920?h=9a9f238f24?rel=0&autoplay=0&mute=0"
-              // https://player.vimeo.com/video/868666920
-              allow="autoplay; encrypted-media"
-            ></iframe>
+          
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer_demo videoPath={customStreamVideoUrl_ranga_technologies} cropArea={cropArea_demo} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_demo videoPath={customStreamVideoUrl_ranga_technologies} cropArea={cropArea_demo_mob} />}
+          </div>
+          
+
+            
           </div>
         </div>
         
@@ -522,27 +619,23 @@ export default function HomeMainComponent() {
         <br />
         <br />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
           {/* Box 1 */}
 
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
+          <button className="lg:hover:bg-[#B1B2FF] lg:hover:scale-110 lg:duration-500 lg:drop-shadow-lg lg:bg-yellow-200 lg:rounded-lg lg:p-4 bg-[#ECF2FF] p-2 rounded-md">
+          
+          
+       
+
           <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_1} cropArea={cropArea} />}
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_1.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_1} cropArea={cropArea} />}
+          </div>
 
-              }}
-                  />
-            </div>
+
 
 
 
@@ -557,23 +650,17 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-          <div >
+          
 
-                        <CroppedVideoPlayer
-                          videoPath="/videos/project_2.mp4"
-                          
-                          cropArea={{
-                            width: '370px',
-                            height: '300px',
-                            top: '0px',
-                            left: '0px',
-                            borderRadiusTop: '10px',
-                            borderRadiusBottom: '10px',
-                            startTime: 0,
 
-                          }}
-                              />
-                        </div>
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_2} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_2} cropArea={cropArea} />}
+          </div>
+
 
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
             Tailored E-Learning Website
@@ -585,33 +672,19 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE3}
-            /> */}
-            <div >
+            
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_3.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 1,
 
-              }}
-                  />
-    </div>
-            {/* <Image
-                src="/project_3.gif"
-                width={300}
-                height={300}
-                alt="Picture of the author"
-              /> */}
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_3} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_3} cropArea={cropArea} />}
+          </div>
+
+
+
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
             Smoking Vape Hub
             </h2>
@@ -637,23 +710,17 @@ export default function HomeMainComponent() {
           {/* Box 1 */}
 
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-          <div >
+          
+          
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_4.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_4} cropArea={cropArea} />}
 
-              }}
-                  />
-            </div>
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_4} cropArea={cropArea} />}
+          </div>
+
 
 
 
@@ -668,23 +735,17 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-          <div >
+          
+          
 
-                        <CroppedVideoPlayer
-                          videoPath="/videos/project_5.mp4"
-                          
-                          cropArea={{
-                            width: '370px',
-                            height: '300px',
-                            top: '0px',
-                            left: '0px',
-                            borderRadiusTop: '10px',
-                            borderRadiusBottom: '10px',
-                            startTime: 0,
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_5} cropArea={cropArea} />}
 
-                          }}
-                              />
-                        </div>
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_5} cropArea={cropArea} />}
+          </div>
+
 
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
             ProjectFlow Dashboard
@@ -696,33 +757,18 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE3}
-            /> */}
-            <div >
+            
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_6.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
 
-              }}
-                  />
-    </div>
-            {/* <Image
-                src="/project_3.gif"
-                width={300}
-                height={300}
-                alt="Picture of the author"
-              /> */}
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_6} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_6} cropArea={cropArea} />}
+          </div>
+
+
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
             EduHub Management Dashboard
             </h2>
@@ -748,23 +794,18 @@ export default function HomeMainComponent() {
           {/* Box 1 */}
 
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-          <div >
+  
+          
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_7.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
 
-              }}
-                  />
-            </div>
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_7} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_7} cropArea={cropArea} />}
+          </div>
+
 
 
 
@@ -779,23 +820,18 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-          <div >
+          
+          
 
-                        <CroppedVideoPlayer
-                          videoPath="/videos/project_8.mp4"
-                          
-                          cropArea={{
-                            width: '370px',
-                            height: '300px',
-                            top: '0px',
-                            left: '0px',
-                            borderRadiusTop: '10px',
-                            borderRadiusBottom: '10px',
-                            startTime: 0,
 
-                          }}
-                              />
-                        </div>
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_8} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_8} cropArea={cropArea} />}
+          </div>
+
 
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
             FlutterDev Delivery Management
@@ -807,33 +843,18 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE3}
-            /> */}
-            <div >
+            
+          
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_9.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
 
-              }}
-                  />
-    </div>
-            {/* <Image
-                src="/project_3.gif"
-                width={300}
-                height={300}
-                alt="Picture of the author"
-              /> */}
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_9} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_9} cropArea={cropArea} />}
+          </div>
+
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
             FlutterSky Booking App
             </h2>
@@ -848,23 +869,18 @@ export default function HomeMainComponent() {
           {/* Box 1 */}
 
           <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF] ">
-          <div >
+          
+          
+          
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_10.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_10} cropArea={cropArea} />}
 
-              }}
-                  />
-            </div>
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_10} cropArea={cropArea} />}
+          </div>
+
 
 
 
@@ -879,23 +895,18 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
-          <div >
+          
 
-                        <CroppedVideoPlayer
-                          videoPath="/videos/project_11.mp4"
-                          
-                          cropArea={{
-                            width: '370px',
-                            height: '300px',
-                            top: '0px',
-                            left: '0px',
-                            borderRadiusTop: '10px',
-                            borderRadiusBottom: '10px',
-                            startTime: 0,
+          
 
-                          }}
-                              />
-                        </div>
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_11} cropArea={cropArea} />}
+
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_11} cropArea={cropArea} />}
+          </div>
+
 
             <h2 className="mt-2 ml-2 text-xl underline text-center font-semibold mb-2">
             Tailored E-Learning Website
@@ -907,33 +918,16 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <div className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-yellow-200 rounded-lg p-4 bg-[#ECF2FF]">
-            {/* <img
-              className="hover:animate-pulse transform transition-all "
-              src={CASE3}
-            /> */}
-            <div >
+            
 
-            <CroppedVideoPlayer
-              videoPath="/videos/project_12.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
+          <div>
+            {/* web demo */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_12} cropArea={cropArea} />}
 
-              }}
-                  />
-    </div>
-            {/* <Image
-                src="/project_3.gif"
-                width={300}
-                height={300}
-                alt="Picture of the author"
-              /> */}
+          {/* mobile demo */}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_12} cropArea={cropArea} />}
+          </div>
+
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
             FlutterTrade Mobile App
             </h2>
@@ -968,23 +962,18 @@ export default function HomeMainComponent() {
               <div className=" flex ">
                 {/* <svg className  ="w-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> */}
               </div>
-              <div >
+              
+                
 
-                <CroppedVideoPlayer
-                  videoPath="/videos/service_1.mp4"
-                  
-                  cropArea={{
-                    width: '370px',
-                    height: '300px',
-                    top: '0px',
-                    left: '0px',
-                    borderRadiusTop: '10px',
-                    borderRadiusBottom: '10px',
-                    startTime: 0,
 
-                  }}
-                      />
-                </div>
+                <div>
+                    {/* web demo */}
+                  {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_service_1} cropArea={cropArea} />}
+
+                  {/* mobile demo */}
+                  {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_1} cropArea={cropArea} />}
+                  </div>
+
               <div className="  ">
                 <h2 className="text-2xl font-bold mb-3 mt-3 ">Web and Mobile App</h2>
                 <h2 className=" text-1xl  mb-3 mt-3 ">Crafting unified digital experiences for web, mobile, and platforms seamlessly.</h2>
@@ -994,23 +983,16 @@ export default function HomeMainComponent() {
 
           {/* Box 2 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff] ">
-          <div >
+          
 
-            <CroppedVideoPlayer
-              videoPath="/videos/service_2.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
+          <div>
+              {/* web demo */}
+            {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_service_2} cropArea={cropArea} />}
 
-              }}
-                  />
+            {/* mobile demo */}
+            {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_2} cropArea={cropArea} />}
             </div>
+          
             <h2 className="text-2xl font-bold mb-3 mt-3 ">
             Fintech Solutions
             </h2>
@@ -1026,23 +1008,18 @@ export default function HomeMainComponent() {
 
           {/* Box 3 */}
           <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff]">
-          <div >
+          
 
-            <CroppedVideoPlayer
-              videoPath="/videos/service_3.mp4"
-              
-              cropArea={{
-                width: '370px',
-                height: '300px',
-                top: '0px',
-                left: '0px',
-                borderRadiusTop: '10px',
-                borderRadiusBottom: '10px',
-                startTime: 0,
+            
+            <div>
+              {/* web demo */}
+            {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_service_3} cropArea={cropArea} />}
 
-              }}
-                  />
-                  </div>
+            {/* mobile demo */}
+            {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_3} cropArea={cropArea} />}
+            </div>
+
+
             <h2 className="text-2xl font-bold mb-3 mt-3 ">
             Blockchain Development
             </h2>
