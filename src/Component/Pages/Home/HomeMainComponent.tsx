@@ -128,8 +128,8 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
   };
   // gif prop mob
   const cropArea_gif_mob = {
-    width: '90px',
-    height: '90px',
+    width: '80px',
+    height: '80px',
     top: '0px',
     left: '0px',
     borderRadiusTop: '100px',
@@ -437,9 +437,12 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                   borderWidth: 15,
                   transform: `translate(${10}px, ${50}px)`,
                 }}
+
               >
+                <br />
+                <br />
                 <div
-                  className="bg-[#145DA0] flex mt-8  h-30 w-30 items-center p-1 rounded-full rounded-circle"
+                  className="bg-[#145DA0] h-30 w-30 items-center p-1 rounded-full rounded-circle"
                   style={{
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
