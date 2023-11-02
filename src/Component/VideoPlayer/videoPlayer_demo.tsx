@@ -64,7 +64,7 @@ const CroppedVideoPlayer_demo: React.FC<CroppedVideoPlayerProps_demo> = ({ video
         playsInline
         loop
         controls
-        loading="lazy" // Add lazy loading
+        // loading="lazy" // Add lazy loading
         // onMouseEnter={handleMouseEnter}
         // onMouseLeave={handleMouseLeave}
         style={{
@@ -76,7 +76,7 @@ const CroppedVideoPlayer_demo: React.FC<CroppedVideoPlayerProps_demo> = ({ video
           objectFit: 'cover',
       
         }}
-        {...({} as any)}
+        // {...({} as any)}
       >
         <source src={videoPath} type="video/mp4" />
 

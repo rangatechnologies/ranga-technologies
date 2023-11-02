@@ -65,7 +65,7 @@ const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.clo
 
 
 
-const customStreamVideoUrl_landing_hello = '/videos/landing_hello_compress.mp4';
+const customStreamVideoUrl_landing_hello = 'https://d1o28nvpq2ey2q.cloudfront.net/landing_hello_compress.mp4';
 
 // ranga technologies demo
 const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfront.net/ranga_technologies.mp4';
