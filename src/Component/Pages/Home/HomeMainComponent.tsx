@@ -74,7 +74,17 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
 // projects prop web
   const cropArea = {
-    width: '450px',
+    width: '365px',
+    height: '300px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '10px',
+    borderRadiusBottom: '10px',
+    startTime: 0,
+  };
+// mob
+  const cropArea_mob = {
+    width: '350px',
     height: '300px',
     top: '0px',
     left: '0px',
@@ -85,8 +95,19 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
 
 
+
   const cropArea_project_3 = {
     width: '365px',
+    height: '300px',
+    top: '0px',
+    left: '0px',
+    borderRadiusTop: '10px',
+    borderRadiusBottom: '10px',
+    startTime: 2,
+  };
+
+  const cropArea_mob_project_3 = {
+    width: '350px',
     height: '300px',
     top: '0px',
     left: '0px',
@@ -209,6 +230,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
   //   window.requestAnimationFrame(() => renderAnimation(ev));
   // };
 
+  
   // useLayoutEffect(() => {
   //   renderAnimation({ clientX: 0, clientY: 0 });
   //   setTimeout(() => {
@@ -662,7 +684,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_1} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_1} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_1} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -688,7 +710,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_2} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_2} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_2} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -707,10 +729,10 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
           <div>
             {/* web demo */}
-          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_3} cropArea={cropArea} />}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_3} cropArea={cropArea_project_3} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_3} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_3} cropArea={cropArea_mob_project_3} />}
           </div>
 
 
@@ -748,7 +770,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_4} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_4} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_4} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -773,7 +795,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_5} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_5} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_5} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -795,7 +817,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_6} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_6} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_6} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -833,7 +855,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_7} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_7} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_7} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -859,7 +881,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_8} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_8} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_8} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -882,7 +904,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_9} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_9} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_9} cropArea={cropArea_mob} />}
           </div>
 
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
@@ -908,7 +930,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_10} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_10} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_10} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -934,7 +956,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_11} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_11} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_11} cropArea={cropArea_mob} />}
           </div>
 
 
@@ -955,7 +977,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_12} cropArea={cropArea} />}
 
           {/* mobile demo */}
-          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_12} cropArea={cropArea} />}
+          {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_12} cropArea={cropArea_mob} />}
           </div>
 
             <h2 className="mt-2 ml-2 text-xl text-center underline font-semibold mb-2">
@@ -1001,7 +1023,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                   {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_service_1} cropArea={cropArea} />}
 
                   {/* mobile demo */}
-                  {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_1} cropArea={cropArea} />}
+                  {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_1} cropArea={cropArea_mob} />}
                   </div>
 
               <div className="  ">
@@ -1020,7 +1042,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_service_2} cropArea={cropArea} />}
 
             {/* mobile demo */}
-            {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_2} cropArea={cropArea} />}
+            {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_2} cropArea={cropArea_mob} />}
             </div>
           
             <h2 className="text-2xl font-bold mb-3 mt-3 ">
@@ -1046,7 +1068,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer videoPath={customStreamVideoUrl_service_3} cropArea={cropArea} />}
 
             {/* mobile demo */}
-            {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_3} cropArea={cropArea} />}
+            {isClient && window.innerWidth < 768 && <CroppedVideoPlayer_mob videoPath={customStreamVideoUrl_service_3} cropArea={cropArea_mob} />}
             </div>
 
 
