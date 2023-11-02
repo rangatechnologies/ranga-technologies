@@ -25,7 +25,7 @@ export default function NavBar() {
           setTabIndex={setLoginTabIndex}
         />
       </div>
-      <div className="bg-colorid5658bf4e flex-row h-nav md:items-center justify-between   flex md:justify-center">
+      <div className="bg-[#000000] flex-row h-nav md:items-center justify-between   flex md:justify-center">
         {/* <NavLink to="/">
           <img src={logo} className="h-10 md:mt-0 mt-2 mb-2  " alt="" />
           </NavLink> */}
@@ -46,7 +46,7 @@ export default function NavBar() {
         /> */}
         <div
           className={
-            "fixed top-0 md:relative md:w-full md:h-full  bg-colorid5658bf4e flex-row max-w-5xl items-center flex-grow  flex transition-all right-0 overflow-hidden" +
+            "fixed top-0 md:relative md:w-full md:h-full  bg-[#000000] flex-row max-w-5xl items-center flex-grow  flex transition-all right-0 overflow-hidden" +
             (mobileMenu
               ? " md:max-h-full h-full w-full rounded-bl-none opacity-100"
               : " md:w-full w-0 md:h-full h-0 opacity-0 md:opacity-100 rounded-bl-full  md:rounded-bl-none ")

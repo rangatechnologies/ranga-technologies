@@ -1,7 +1,7 @@
 // CroppedVideoPlayer.tsx
 import React, { useRef, useState, useEffect } from 'react';
 
-interface CroppedVideoPlayerProps_demo {
+interface CroppedVideoPlayerProps_animation {
   videoPath: string;
   cropArea: {
     width: string;
@@ -14,11 +14,10 @@ interface CroppedVideoPlayerProps_demo {
   };
 }
 
-const CroppedVideoPlayer_demo: React.FC<CroppedVideoPlayerProps_demo> = ({ videoPath, cropArea }) => {
+const CroppedVideoPlayer_animation: React.FC<CroppedVideoPlayerProps_animation> = ({ videoPath, cropArea }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isHovered, setHovered] = useState(false);
-  // const isHovered = true;
-
+  const [isHovere, setHovered] = useState(false);
+  const isHovered = true;
 
   useEffect(() => {
     if (videoRef.current && cropArea.startTime) {
@@ -60,20 +59,20 @@ const CroppedVideoPlayer_demo: React.FC<CroppedVideoPlayerProps_demo> = ({ video
       <video
         ref={videoRef}
         autoPlay={isHovered}
-        // muted
+        muted
         playsInline
         loop
         controls
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
-
+          position: 'absolute',
           top: cropArea.top,
           left: cropArea.left,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
-      
+          justifyContent:'JustifySelf'
         }}
       >
         <source src={videoPath} type="video/mp4" />
@@ -83,4 +82,4 @@ const CroppedVideoPlayer_demo: React.FC<CroppedVideoPlayerProps_demo> = ({ video
   );
 };
 
-export default CroppedVideoPlayer_demo;
+export default CroppedVideoPlayer_animation;

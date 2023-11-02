@@ -21,7 +21,7 @@ function App() {
   
         <Home />
 
-        <footer className="bg-primary w-full text-colorid4e749ecb justify-center items-center flex flex-col py-12">
+        <footer className="bg-[#000] w-full text-colorid4e749ecb justify-center items-center flex flex-col py-12">
           <div className="flex  flex-col text-center items-center font-bold text-3xl">
             Ranga Technologies
           </div>
@@ -179,7 +179,7 @@ function App() {
           </div>
 
           {/* <!-- Copyright section --> */}
-          <div className="p-4 text-center bg-primary">
+          <div className="p-4 text-center bg-[#000]">
             <h2> © 2023 Copyright: Ranga Technologies</h2>
           </div>
         </footer>

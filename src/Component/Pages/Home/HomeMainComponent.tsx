@@ -15,6 +15,9 @@ import CroppedVideoPlayer_mob from '../../VideoPlayer/videoPlayer_mob';
 
 import CroppedVideoPlayer_2 from '../../VideoPlayer/videoPlayer_2';
 import CroppedVideoPlayer_demo from '../../VideoPlayer/videoPlayer_demo';
+import CroppedVideoPlayer_animation from '../../VideoPlayer/videoPlayer_animation';
+
+
 
 import "./home.css";
 
@@ -49,8 +52,18 @@ export default function HomeMainComponent() {
   const customStreamVideoUrl_service_3 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_3.mp4';
 
 // spline and gif
-const customStreamVideoUrl_backround_animation_web = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_web.mp4';
-const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_mob.mp4';
+// const customStreamVideoUrl_backround_animation_web = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_web.mp4';
+// const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_mob.mp4';
+
+// black background videos
+// web
+const customStreamVideoUrl_backround_animation_web = 'https://d1o28nvpq2ey2q.cloudfront.net/bg_animation_web.mp4';
+
+
+// mob
+const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.cloudfront.net/bg-animation-mob.mp4';
+
+
 
 const customStreamVideoUrl_landing_hello = 'https://d1o28nvpq2ey2q.cloudfront.net/landing_hello.mp4';
 
@@ -103,20 +116,45 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
     startTime: 0,
   };
   
+
+  // animation
+  // web
+
+    const cropArea_animation_web = {
+      width: '1600px',
+      height: '780px',
+      top: '100px',
+      left: '0px',
+      borderRadiusTop: '0px',
+      borderRadiusBottom: '0px',
+      startTime: 0,
+    };
+    // mob
+    const cropArea_animation_mob = {
+      width: '1400px',
+      height: '800px',
+      top: '60px',
+      left: '0px',
+      borderRadiusTop: '0px',
+      borderRadiusBottom: '0px',
+      startTime: 0,
+    };
+
+
   // ranga technologies demo
   const cropArea_demo = {
-    width: '1250px',
-    height: '600px',
-    top: '0px',
+    width: '1200px',
+    height: '700px',
+    top: '100px',
     left: '0px',
-    borderRadiusTop: '20px',
-    borderRadiusBottom: '20px',
+    borderRadiusTop: '0px',
+    borderRadiusBottom: '0px',
     startTime: 0,
   };
 
     // ranga technologies demo
     const cropArea_demo_mob = {
-      width: '390px',
+      width: '440px',
       height: '280px',
       top: '0px',
       left: '0px',
@@ -214,8 +252,9 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
       
 
       <div 
+      // color palets https://www.canva.com/colors/color-palettes/mermaid-lagoon/
         // ref={containerRef}
-         className="w-full h-screen bg-gradient-to-t overflow-hidden from-gradiant2 to-gradiant1 flex justify-start flex-col items-center">
+         className="w-full h-screen  overflow-hidde bg-[#000000] flex justify-start flex-col items-center">
       
         <div className="max-w-6xl justify-center flex items-start flex-col  w-full">
         
@@ -228,18 +267,19 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             <div className=" hidden md:flex   z-50">
               
               <div
-                className="border-primary rounded-full flex overflow-visible justify-center items-center"
+                className="bg-[#000000] border-[#145DA0]  rounded-full flex overflow-visible justify-center items-center"
                 style={{
                   height: 600,
                   width: 600,
                   borderWidth: 15,
+                  color:"currentcolor",
                   transform: `translate(${10}px, ${0}px)`,
                 }}
                 
               >
                 
                 <div
-                  className="bg-primary drop-shadow-2xl md:h-700 md:w-avatar hidden md:flex items-center p-1 rounded-full"
+                  className=" bg-[#145DA0] drop-shadow-2xl md:h-700 md:w-avatar hidden md:flex items-center p-1 rounded-full"
                   style={{
                     transform: `translate(${-70}px, ${-100}px)`,
                     width: 200,
@@ -499,30 +539,13 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
             {/* Mobile END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
 
-
-
-
-
-
-
-
-
-
-          {/* <div ref={btcRef} className="w-full flex  justify-end h-0 z-0">
-            <img
-              src={bitcoin}
-              style={{
-                height: 130,
-              }}
-              className="animate-bitcoin-intro p-4 md:p-0"
-              alt=""
-            />
-          </div> */}
           <div>
 
 
 
-          {isClient && window.innerWidth >= 768 && <SpliceBall />}
+          {/* {isClient && window.innerWidth >= 768 && <SpliceBall />} */}
+          {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer_animation videoPath={customStreamVideoUrl_backround_animation_web} cropArea={cropArea_animation_web} />}
+          
           
           
 
@@ -570,19 +593,26 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             />
           </div> */}
         </div>
-        {isClient && window.innerWidth < 768 && <SpliceBall_Mobile />}
+        {/* {isClient && window.innerWidth < 768 && <SpliceBall_Mobile />}
+         */}
+
+{isClient && window.innerWidth < 768 && <CroppedVideoPlayer_animation videoPath={customStreamVideoUrl_backround_animation_mob} cropArea={cropArea_animation_mob} />}
+
+
       </div>
 
       <br />
 
       {/* video we offer */}
-      <div className="container mx-auto py-8 bg-[#ffffff]">
-        <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl lg:gap-12">
+      <div className="container justify-center mx-auto py-8 bg-[#ffffff]">
+        <div className="justify-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl lg:gap-12">
+       
           {/* Box 1 */}
-
-          <div className="drop-shadow-lg max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl rounded lg:p-4 bg-[#B1B2FF]   ">
           
-          <div>
+
+          <div className="justify-center drop-shadow-lg max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl rounded lg:p-4 bg-[#ffffff]   ">
+          
+          <div className="justify-center ml-6 mb-4 mt-4 mr-6">
             {/* web demo */}
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer_demo videoPath={customStreamVideoUrl_ranga_technologies} cropArea={cropArea_demo} />}
 
@@ -622,7 +652,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
           {/* Box 1 */}
 
-          <button className="lg:hover:bg-[#B1B2FF] lg:hover:scale-110 lg:duration-500 lg:drop-shadow-lg lg:bg-yellow-200 lg:rounded-lg lg:p-4 bg-[#ECF2FF] p-2 rounded-md">
+          <button className=" justify-center lg:hover:bg-[#B1B2FF] lg:hover:scale-110 lg:duration-500 lg:drop-shadow-lg lg:bg-yellow-200 lg:rounded-lg lg:p-4 bg-[#ECF2FF] p-2 rounded-md">
           
           
        
@@ -1044,7 +1074,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-12">
           {/* Box 1 */}
 
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ffffff]   ">
             <div className="inline-block">
               {/* <img
                 className="hover:animate-pulse transform transition-all "
@@ -1069,7 +1099,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           </button>
 
           {/* Box 2 */}
-          <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0] ">
+          <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff] ">
             {/* <img
               className="hover:animate-pulse transform transition-all "
               src={process2}
@@ -1090,7 +1120,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           </button>
 
           {/* Box 3 */}
-          <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0]">
+          <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff]">
             {/* <img
               className="hover:animate-pulse transform transition-all "
               src={process3}
@@ -1112,7 +1142,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           </button>
 
           {/* Box 4 */}
-          <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#FAF3F0]">
+          <button className=" hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ffffff]">
             {/* <img
               className="hover:animate-pulse transform transition-all "
               src={process4}
@@ -1135,7 +1165,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-7  gap-12 m-auto justify-items-end">
           {/* Box 5 */}
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ffffff]   ">
             <div className="inline-block">
               {/* <img
                 className="hover:animate-pulse transform transition-all "
@@ -1160,7 +1190,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           </button>
 
           {/* Box 6 */}
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ffffff]   ">
             <div className="inline-block">
               {/* <img
                 className="hover:animate-pulse transform transition-all "
@@ -1185,7 +1215,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
           </button>
 
           {/* Box 7 */}
-          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#FAF3F0]   ">
+          <button className="hover:bg-[#B1B2FF]  hover:scale-110  duration-500 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ffffff]   ">
             <div className="inline-block">
               {/* <img
                 className="hover:animate-pulse transform transition-all "
@@ -1220,7 +1250,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
       {/* Start conversetion  */}
 
-      <div className="w-full  h-60 md:h-75 lg:h-48 bg-[#ECF2FF]">
+      <div className="w-full  h-60 md:h-75 lg:h-48 drop-shadow-lg bg-[#ffffff]">
         <div className="">
           <br />
           <br />
@@ -1234,7 +1264,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
         <div className=" text-center">opportunities.</div>
       </div>
 
-      <div className="grid grid-cols-5 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ECF2FF]">
+      <div className="grid grid-cols-5 drop-shadow-lg bg-blue-200 rounded-lg  p-4 bg-[#ffffff]">
         <div className="col-span-2 ">
           {/* <img
             className="hover:animate-pulse transform transition-all "
@@ -1263,7 +1293,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                     type="text"
                     id="firstName"
                     name="firstName"
-                    className="w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    className="bg-[#E3DFFD] w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
                     required
                   />
                 </div>
@@ -1273,7 +1303,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                     placeholder="Email"
                     type="email"
                     id="email"
-                    className="w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    className=" bg-[#E3DFFD] w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
                     required
                   />
                 </div>
@@ -1284,7 +1314,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                     type="name"
                     id="name"
                     name="name"
-                    className="w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    className="bg-[#E3DFFD] w-3/4 lg:w-1/2 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md focus:outline-none focus:border-indigo-500"
                     required
                   />
                 </div>
@@ -1403,7 +1433,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                 <h2 className="mb-4">Tell us about your project</h2>
                 <div>
                   <textarea
-                    className="w-3/4 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md"
+                    className="bg-[#E3DFFD] w-3/4 p-2 hover:animate-pulse hover:text-2xl transition-all duration-300 rounded-md"
                     id="subject"
                     name="subject"
                     placeholder="Write something.."
@@ -1412,7 +1442,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
                 <button
                   type="submit"
-                  className="shadow-2xl lg:w-40 lg:h-15 text-xl  mt-4 transition-all transform duration-500 bg-[#3C79F5] text-white py-2 px-4 rounded-md hover:bg-[#6f3cc8]"
+                  className="shadow-2xl lg:w-40 lg:h-15 text-xl  mt-4 transition-all transform duration-500 bg-primary text-white py-2 px-4 rounded-md hover:bg-[#3b50c8]"
                 >
                   Submit
                 </button>
