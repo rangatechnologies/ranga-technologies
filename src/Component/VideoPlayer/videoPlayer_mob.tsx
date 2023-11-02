@@ -62,6 +62,7 @@ const CroppedVideoPlayer_mob: React.FC<CroppedVideoPlayerProps_mob> = ({ videoPa
         muted
         playsInline
         loop
+        loading="lazy" // Add lazy loading
         style={{
 
           top: cropArea.top,
@@ -74,6 +75,7 @@ const CroppedVideoPlayer_mob: React.FC<CroppedVideoPlayerProps_mob> = ({ videoPa
           marginBottom:4,
 
         }}
+        {...({} as any)}
       >
         <source src={videoPath} type="video/mp4" />
         Your browser does not support the video tag.

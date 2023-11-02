@@ -60,7 +60,7 @@ const CroppedVideoPlayer_2: React.FC<CroppedVideoPlayerProps_2> = ({ videoPath, 
         ref={videoRef}
         autoPlay
         muted
-        playsInline
+        playsInline 
         loop
         style={{
           position: 'absolute',
