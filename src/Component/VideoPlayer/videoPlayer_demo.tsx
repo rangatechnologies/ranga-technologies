@@ -59,13 +59,13 @@ const CroppedVideoPlayer_demo: React.FC<CroppedVideoPlayerProps_demo> = ({ video
     >
       <video
         ref={videoRef}
-        autoPlay={isHovered}
-        // muted
+        autoPlay
+        muted
         playsInline
         loop
         controls
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        // onMouseEnter={handleMouseEnter}
+        // onMouseLeave={handleMouseLeave}
         style={{
 
           top: cropArea.top,
