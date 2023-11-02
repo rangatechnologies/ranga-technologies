@@ -65,12 +65,16 @@ const CroppedVideoPlayer_mob: React.FC<CroppedVideoPlayerProps_mob> = ({ videoPa
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
-          position: 'absolute',
+
           top: cropArea.top,
           left: cropArea.left,
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
+          marginLeft:4,
+          marginRight:4,
+          marginTop:4,
+          marginBottom:4,
+
         }}
       >
         <source src={videoPath} type="video/mp4" />

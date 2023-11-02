@@ -74,7 +74,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
 // projects prop web
   const cropArea = {
-    width: '365px',
+    width: '450px',
     height: '300px',
     top: '0px',
     left: '0px',
@@ -154,7 +154,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
     // ranga technologies demo
     const cropArea_demo_mob = {
-      width: '440px',
+      width: '360px',
       height: '280px',
       top: '0px',
       left: '0px',
@@ -267,7 +267,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             <div className=" hidden md:flex   z-50">
               
               <div
-                className="bg-[#000000] border-[#145DA0]  rounded-full flex overflow-visible justify-center items-center"
+                className=" border-[#145DA0]  rounded-full flex overflow-visible justify-center items-center"
                 style={{
                   height: 600,
                   width: 600,
@@ -408,7 +408,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             {/* Mobile @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
             <div className=" md:hidden flex z-50">
               <div
-                className="bg-[#000000] border-[#145DA0] rounded-full flex flex-col overflow-visible justify-center items-center"
+                className=" border-[#145DA0] rounded-full flex flex-col overflow-visible justify-center items-center"
                 style={{
                   height: 450,
                   width: 450,
@@ -417,7 +417,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                 }}
               >
                 <div
-                  className="bg-[#145DA0] flex mt-6  h-20 w-30 items-center p-1 rounded-full rounded-circle"
+                  className="bg-[#145DA0] flex mt-8  h-30 w-30 items-center p-1 rounded-full rounded-circle"
                   style={{
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
@@ -612,7 +612,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
 
           <div className="justify-center drop-shadow-lg max-w-screen-sm md:max-w-screen-md lg:max-w-screen-2xl rounded lg:p-4 bg-[#ffffff]   ">
           
-          <div className="justify-center ml-6 mb-4 mt-4 mr-6">
+          <div className="justify-center ml-4 mb-4 mt-4 mr-4">
             {/* web demo */}
           {isClient && window.innerWidth >= 768 && <CroppedVideoPlayer_demo videoPath={customStreamVideoUrl_ranga_technologies} cropArea={cropArea_demo} />}
 
@@ -652,7 +652,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
           {/* Box 1 */}
 
-          <button className=" justify-center lg:hover:bg-[#B1B2FF] lg:hover:scale-110 lg:duration-500 lg:drop-shadow-lg lg:bg-yellow-200 lg:rounded-lg lg:p-4 bg-[#ECF2FF] p-2 rounded-md">
+          <button className="hover:bg-[#B1B2FF]   hover:scale-110  duration-500 drop-shadow-lg bg-green-200 rounded-lg p-4 bg-[#ECF2FF]">
           
           
        
