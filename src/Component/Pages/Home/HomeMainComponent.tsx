@@ -408,7 +408,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
             {/* Mobile @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
             <div className=" md:hidden flex z-50">
               <div
-                className="border-primary rounded-full flex flex-col overflow-visible justify-center items-center"
+                className="bg-[#000000] border-[#145DA0] rounded-full flex flex-col overflow-visible justify-center items-center"
                 style={{
                   height: 450,
                   width: 450,
@@ -417,7 +417,7 @@ const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfro
                 }}
               >
                 <div
-                  className="flex mt-6  h-20 w-30 items-center p-1 rounded-full rounded-circle"
+                  className="bg-[#145DA0] flex mt-6  h-20 w-30 items-center p-1 rounded-full rounded-circle"
                   style={{
                     transform: `translate(${0}px, ${-50}px)`,
                   }}
