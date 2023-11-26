@@ -32,47 +32,56 @@ export default function HomeMainComponent() {
   const fishRef = useRef<HTMLImageElement>(null);
   const waveRef = useRef<HTMLImageElement>(null);
 
+  // import project_1 from '/videos/project_1.mp4';
+  // import project_2 from '/videos/project_2.mp4';
+  // import project_3 from '/videos/project_3.mp4';
+  // import project_4 from '/videos/project_4.mp4';
+  // import project_5 from '/videos/project_5.mp4';
+  // import project_6 from '/videos/project_6.mp4';
+  // import project_7 from '/videos/project_7.mp4';
+  // import project_8 from '/videos/project_8.mp4';
+  // import project_9 from '/videos/project_9.mp4';
+  // import project_10 from '/videos/project_10.mp4';
+  // import project_11 from '/videos/project_11.mp4';
+  // import project_12 from '/videos/project_12.mp4';
+
+  // import service_1 from '/videos/service_1.mp4';
+  // import service_2 from '/videos/service_2.mp4';
+  // import service_3 from '/videos/service_3.mp4';
+
+  // import backround_animation_web from '/videos/backround_animation_web.mp4';
+  // import backround_animation_mob from '/videos/backround_animation_mob.mp4';
+
+  // import landing_hello from '/videos/landing_hello_compress.mp4';
+
   // video urls
-  const customStreamVideoUrl_1 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_1.mp4';
-  const customStreamVideoUrl_2 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_2.mp4';
-  const customStreamVideoUrl_3 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_3.mp4';
-  const customStreamVideoUrl_4 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_4.mp4';
-  const customStreamVideoUrl_5 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_5.mp4';
-  const customStreamVideoUrl_6 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_6.mp4';
-  const customStreamVideoUrl_7 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_7.mp4';
-  const customStreamVideoUrl_8 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_8.mp4';
-  const customStreamVideoUrl_9 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_9.mp4';
-  const customStreamVideoUrl_10 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_10.mp4';
-  const customStreamVideoUrl_11 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_11.mp4';
-  const customStreamVideoUrl_12 = 'https://d1o28nvpq2ey2q.cloudfront.net/project_12.mp4';
+  const customStreamVideoUrl_1 = '/videos/project_1.mp4';
+  const customStreamVideoUrl_2 = '/videos/project_2.mp4';
+  const customStreamVideoUrl_3 = '/videos/project_3.mp4';
+  const customStreamVideoUrl_4 = '/videos/project_4.mp4';
+  const customStreamVideoUrl_5 = '/videos/project_5.mp4';
+  const customStreamVideoUrl_6 = '/videos/project_6.mp4';
+  const customStreamVideoUrl_7 = '/videos/project_7.mp4';
+  const customStreamVideoUrl_8 = '/videos/project_8.mp4';
+  const customStreamVideoUrl_9 = '/videos/project_9.mp4';
+  const customStreamVideoUrl_10 = '/videos/project_10.mp4';
+  const customStreamVideoUrl_11 = '/videos/project_11.mp4';
+  const customStreamVideoUrl_12 = '/videos/project_12.mp4';
 
   // Services
-  const customStreamVideoUrl_service_1 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_1.mp4';
-  const customStreamVideoUrl_service_2 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_2.mp4';
-  const customStreamVideoUrl_service_3 = 'https://d1o28nvpq2ey2q.cloudfront.net/service_3.mp4';
+  const customStreamVideoUrl_service_1 = '/videos/service_1.mp4';
+  const customStreamVideoUrl_service_2 = '/videos/service_2.mp4';
+  const customStreamVideoUrl_service_3 = '/videos/service_3.mp4';
 
-// spline and gif
-// const customStreamVideoUrl_backround_animation_web = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_web.mp4';
-// const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.cloudfront.net/backround_animation_mob.mp4';
+  // spline and gif
+  const customStreamVideoUrl_backround_animation_web = '/videos/backround_animation_web.mp4';
+  const customStreamVideoUrl_backround_animation_mob = '/videos/backround_animation_mob.mp4';
 
-// black background videos
-// web
-const customStreamVideoUrl_backround_animation_web = 'https://d1o28nvpq2ey2q.cloudfront.net/bg_animation_web.mp4';
+  const customStreamVideoUrl_landing_hello = '/videos/landing_hello_compress.mp4';
+  // ranga technologies demo
+  const customStreamVideoUrl_ranga_technologies = '/videos/ranga_technologies.mp4';
 
-
-// mob
-const customStreamVideoUrl_backround_animation_mob = 'https://d1o28nvpq2ey2q.cloudfront.net/bg-animation-mob.mp4';
-
-
-
-const customStreamVideoUrl_landing_hello = 'https://d1o28nvpq2ey2q.cloudfront.net/landing_hello_compress.mp4';
-
-// ranga technologies demo
-const customStreamVideoUrl_ranga_technologies = 'https://d1o28nvpq2ey2q.cloudfront.net/ranga_technologies.mp4';
-
-
-
-// projects prop web
+  // projects prop web
   const cropArea = {
     width: '365px',
     height: '300px',
